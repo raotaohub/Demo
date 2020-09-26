@@ -1,0 +1,194 @@
+.title_info {
+  width: 100%;
+  display: block;
+  background: aquamarine;
+}
+
+body {
+  font-family: PingFang SC, PingFangSC-Regular, Helvetica Neue,
+    Microsoft YaHei Regular, Microsoft YaHei, 宋体, "sans-serif";
+}
+
+a {
+  /* color: rgba(37, 43, 58, 0.7) !important; */
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
+.title_list_btn:hover,
+a:hover {
+  color: #007bff !important;
+}
+
+.carousel-indicators li {
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 100%;
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  margin-right: 4px;
+  opacity: 0.2;
+  transition: transform 1s ease, opacity 0.3s ease-out;
+}
+
+.carousel-indicators .active {
+  background-color: #5e7ce0;
+  transition: opacity 0.6s ease;
+  margin-bottom: 24px;
+  width: 30px !important;
+  height: 9px;
+  border-radius: 15px !important;
+  transition: transform 1s ease, opacity 0.3s ease-out;
+}
+
+.carousel-item {
+  transition: transform 1s ease, opacity 0.3s ease-out;
+}
+
+.btn-primary {
+  height: 32px;
+  line-height: 20px;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin-right: 12px;
+  font-size: 14px !important;
+  border: none !important;
+}
+
+#hotcourse {
+  display: flex;
+  flex-wrap: row wrap;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+.title_list {
+  display: block;
+  position: relative;
+}
+
+.title_list_btn {
+  margin: 0 10px 5px 0;
+  font-size: 14px;
+  text-align: center;
+  height: 24px;
+  padding: 0 10px;
+  background: #f6f7fa;
+  border-radius: 12px;
+  color: #5e6678;
+  font-weight: 500;
+
+  /* float: left; */
+}
+
+#cl_card {
+  flex-flow: row wrap;
+  display: flex;
+  margin-top: 20px;
+  margin-right: -20px;
+  /* 比起这个flex更赞👇 */
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+#cl_card_item {
+  width: 280px;
+  box-shadow: 0 4px 16px 0 rgba(124, 142, 227, 0.12);
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 996;
+  margin-bottom: 16px;
+  margin-right: 20px;
+}
+
+.card_item_box:hover {
+  border-radius: 12px;
+  transform: translateY(-8px);
+  overflow: hidden;
+  box-shadow: 0 14px 16px 0 rgba(150, 142, 227, 0.3);
+}
+
+.card_item_box {
+  box-sizing: border-box;
+}
+
+.cit_box_top {
+  overflow: hidden;
+}
+
+.cit_box_bottom {
+  padding: 0 20px;
+  height: auto;
+  width: 100%;
+  font-size: 16px;
+  color: #293040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 16px;
+  border-radius: 12px;
+  /* 显示换行 */
+  white-space: nowrap;
+}
+
+.cit_title {
+  /* 加粗的 */
+  font-weight: 700;
+}
+
+.cit_info {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #959eb2;
+  font-size: 12px;
+  align-items: center;
+}
+
+.cit_info_userlogo {
+  background-position: -508px -192px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/classroom.sprite.a8c4b583317a1934d9f5.png?);
+}
+
+.cit_info_schlogo {
+  background-position: -240px -468px;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/classroom.sprite.a8c4b583317a1934d9f5.png?);
+}
+
+.cit_info_time {
+  display: block;
+}
+
+.cit_info_time>span {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 2px 8px;
+  position: relative;
+  left: 150px;
+  float: right;
+}
+
+.cit_content {
+  height: 48px;
+  line-height: 24px;
+  width: 100%;
+  font-size: 14px;
+  color: #5e6678;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  margin-top: 8px;
+}
