@@ -3,17 +3,16 @@
  */
 import Vue from 'vue'
 import Router from 'vue-router'
-// home
+// 路由头
 import home from '@/views/home.vue'
 import kunpeng from '@/views/kunpeng.vue'
 import experimentalclass from '@/views/experimentalclass.vue'
-// course
+// course的子路由
 import cloudclassroom from '@/views/course/cloudclassroom.vue'
 import cloudlab from '@/views/course/cloudlab.vue'
 import microauthentication from '@/views/course/microauthentication.vue'
 import teachingmarket from '@/views/course/teachingmarket.vue'
-
-// cloudclassroom
+// cloudclassroom的子路由
 import hotcourse from '@/views/course/cloudclassroom/hotcourse.vue'
 import hotactivity from '@/views/course/cloudclassroom/hotactivity.vue'
 import cloudcourse from '@/views/course/cloudclassroom/cloudcourse.vue'
@@ -24,7 +23,6 @@ Vue.use(Router)
 export default new Router({
   // 配置路由
   routes: [
-
     { // home
       path: '/home',
       name: 'home',
@@ -44,7 +42,7 @@ export default new Router({
       path: '/cloudclassroom',
       name: 'cloudclassroom',
       component: cloudclassroom,
-      children:[
+      children: [
         {
           path: 'hotcourse',
           name: 'hotcourse',
@@ -87,6 +85,7 @@ export default new Router({
       component: teachingmarket,
     },
     {
+      // 重定向至home
       path: '',
       redirect: '/home'
     },

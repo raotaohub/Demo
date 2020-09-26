@@ -25,7 +25,7 @@
                 <div class="card_bg" :style="{backgroundPositionY: `${bpyStyle(index)}` + 'px'}"></div>
               </div>
               <div class="cit_box_bottom">
-                <span class="cit_title">{{hotcourseList[index].title}}</span>
+                <span class="cit_title">{{item.title}}</span>
                 <div class="cit_info row-vertical-center align-text-bottom">
                   <i class="cit_info_userlogo mr-1"></i>
                   <span class="cit_info_user mr-2">{{item.user}}</span>
@@ -59,7 +59,6 @@ export default {
     newList() {
       const { hotcourseList, filtrate } = this;
       var reg = new RegExp(filtrate, "ig");
-      console.log(reg);
       if (filtrate !== "全部") {
         
         return hotcourseList.filter((item) => item.tag.match(reg) !== null);

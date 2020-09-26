@@ -59,7 +59,6 @@ export default {
     newList() {
       const { hotcourseList, filtrate } = this;
       var reg = new RegExp(filtrate, "ig");
-      console.log(reg);
       if (filtrate !== "全部") {
         return hotcourseList.filter((item) => item.tag.match(reg) !== null);
       } else {

@@ -59,7 +59,6 @@ export default {
     newList() {
       const { hotcourseList, filtrate } = this;
       var reg = new RegExp(filtrate, "ig");
-      console.log(reg);
       if (filtrate !== "全部") {
         return hotcourseList.filter((item) => item.tag.match(reg) !== null);
       } else {
@@ -91,7 +90,7 @@ export default {
           title: "物联网开发者系列课程",
           user: "Classroom",
           school: "华为云",
-          tag: "物联网",
+          tag: "物联网 ",
         },
         {
           url:

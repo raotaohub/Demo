@@ -6,9 +6,9 @@
         <!--  -->
         <!--  -->
         <div class="header_center row-vertical-center">
-          <div class="header_center_box router-link-active" >
+          <div class="header_center_box router-link-active">
             <router-link
-              class="text-center hover text-decoration-none "
+              class="text-center hover text-decoration-none"
               to="/home"
               >首页</router-link
             >
@@ -94,7 +94,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #007bff ;
+  color: #007bff;
 }
 ::-webkit-scrollbar {
   width: 9px;
