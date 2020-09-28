@@ -1,16 +1,9 @@
-.title_info {
-  width: 100%;
-  display: block;
-  background: aquamarine;
-}
-
 body {
   font-family: PingFang SC, PingFangSC-Regular, Helvetica Neue,
     Microsoft YaHei Regular, Microsoft YaHei, 宋体, "sans-serif";
 }
 
 a {
-  /* color: rgba(37, 43, 58, 0.7) !important; */
   text-decoration: none !important;
   background-color: transparent;
 }
@@ -18,6 +11,12 @@ a {
 .title_list_btn:hover,
 a:hover {
   color: #007bff !important;
+}
+
+.title_info {
+  width: 100%;
+  display: block;
+  background: aquamarine;
 }
 
 .carousel-indicators li {
@@ -105,17 +104,16 @@ a:hover {
   z-index: 996;
   margin-bottom: 16px;
   margin-right: 20px;
+  transition: all 0.35s;
 }
-
-.card_item_box:hover {
+#cl_card_item:hover {
   border-radius: 12px;
-  transform: translateY(-8px);
-  overflow: hidden;
-  box-shadow: 0 14px 16px 0 rgba(150, 142, 227, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 20px 0 rgba(124, 142, 227, 0.24);
 }
 
 .card_item_box {
-  box-sizing: border-box;
+  
 }
 
 .cit_box_top {

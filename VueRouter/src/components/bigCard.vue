@@ -1,19 +1,18 @@
 <template>
-  <!-- 本卡片组件一行显示4列 -->
-  <div>
+  <div id="#cl_card">
     <a
       :href="item.url"
       class="text-decoration-none"
       target="_blank"
       id="cl_card_item"
-      v-for="(item, index) in newList"
+      v-for="(item, index) in cardItemList"
       :key="index"
     >
       <nav class="card_item_box">
         <div class="cit_box_top">
           <div
             class="card_bg"
-            :style="{ backgroundPositionY: `${bpyStyle(index)}` + 'px' }"
+            :style="{ backgroundPositionY: item.bpy + 'px' }"
           ></div>
         </div>
         <div class="cit_box_bottom">
@@ -27,6 +26,7 @@
               <span class v-show="item.time !== ''">{{ item.time }}</span>
             </div>
           </div>
+          <div class="cit_content">{{ item.content }}</div>
           <div class="cit_hr"></div>
           <div class="cit_state">
             <span>{{ item.state }}</span>
@@ -41,8 +41,8 @@
 <script>
 export default {
   props: {
-    newList: { type: Array, required: true },
-    bpyStyle: { type: Function, required: false },
+    cardItemList: { type: Array, required: true },
+
     backgroundPositionY: { type: Object, required: false },
   },
   data() {
@@ -53,13 +53,6 @@ export default {
 </script>
 
 <style>
-@import url("../style/cl_card");
-.card_bg {
-  width: 100%;
-  height: 200px;
-  /* width: 280px; */
-  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/index-cloud.07a57744ef9e998461a5.png);
-  border-radius: 12px 12px 0 0;
-  box-sizing: border-box;
-}
+@import url(../style/big_card.css);
+
 </style>

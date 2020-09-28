@@ -40,7 +40,7 @@
     <!--  -->
     <main id="main">
       <!--  -->
-      <nav id="cloudclassroom" class>
+      <nav id="cloudclassroom">
         <!-- 标题 -->
         <section class="cl_title justify-content-center text-center">
           <h3 class>云课堂</h3>
@@ -49,42 +49,8 @@
           >
         </section>
         <!-- 卡片 -->
-        <section id="cl_card">
-          <a
-            :href="item.url"
-            class="text-decoration-none"
-            target="_blank"
-            id="cl_card_item"
-            v-for="(item, index) in cardItemList"
-            :key="index"
-          >
-            <nav class="card_item_box">
-              <div class="cit_box_top">
-                <div
-                  class="card_bg"
-                  :style="{ backgroundPositionY: item.bpy + 'px' }"
-                ></div>
-              </div>
-              <div class="cit_box_bottom">
-                <span class="cit_title">{{ cardItemList[index].title }}</span>
-                <div class="cit_info row-vertical-center align-text-bottom">
-                  <i class="cit_info_userlogo mr-1"></i>
-                  <span class="cit_info_user mr-2">{{ item.user }}</span>
-                  <i class="cit_info_schlogo mr-1"></i>
-                  <span class="cit_info_school">{{ item.school }}</span>
-                  <div class="cit_info_time d-inline-block">
-                    <span class v-show="item.time !== ''">{{ item.time }}</span>
-                  </div>
-                </div>
-                <div class="cit_content">{{ item.content }}</div>
-                <div class="cit_hr"></div>
-                <div class="cit_state">
-                  <span>{{ item.state }}</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </nav>
-          </a>
+        <section class="cl_card">
+          <big-card :cardItemList="cardItemList"></big-card>
         </section>
         <!-- 按钮 -->
         <div class="text-center m-0 p-0">
@@ -95,55 +61,18 @@
           </button>
         </div>
       </nav>
-      <!--  -->
-      <!--  -->
-      <nav id="teachingmarket" class="container-fluid" style="margin-top: 51px">
+
+      <nav id="teachingmarket">
         <!-- 标题 -->
-        <section class="cl_title justify-content-center text-center mt-5">
+        <section class="cl_title justify-content-center text-center">
           <h3 class>教学市场</h3>
           <span style="font-size: 16px; color: #575d6c"
             >丰富教学资源辅助高效教学，免费习题库一键获取</span
           >
         </section>
         <!-- 卡片 -->
-        <section id="cl_card">
-          <a
-            :href="item.url"
-            class="text-decoration-none"
-            target="_blank"
-            id="cl_card_item"
-            v-for="(item, index) in classRoomItemList"
-            :key="index"
-          >
-            <nav class="card_item_box">
-              <div class="cit_box_top">
-                <div
-                  class="card_bg"
-                  :style="{ backgroundPositionY: item.bpy + 'px' }"
-                ></div>
-              </div>
-              <div class="cit_box_bottom">
-                <span class="cit_title">{{
-                  classRoomItemList[index].title
-                }}</span>
-                <div class="cit_info row-vertical-center align-text-bottom">
-                  <i class="cit_info_userlogo mr-1"></i>
-                  <span class="cit_info_user mr-2">{{ item.user }}</span>
-                  <i class="cit_info_schlogo mr-1"></i>
-                  <span class="cit_info_school">{{ item.school }}</span>
-                  <div class="cit_info_time d-inline-block">
-                    <span class v-show="item.time !== ''">{{ item.time }}</span>
-                  </div>
-                </div>
-                <div class="cit_content">{{ item.content }}</div>
-                <div class="cit_hr"></div>
-                <div class="cit_state">
-                  <span>{{ item.state }}</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </nav>
-          </a>
+        <section class="cl_card">
+          <big-card :cardItemList="classRoomItemList"></big-card>
         </section>
         <!-- 按钮 -->
         <div class="text-center m-0 p-0">
@@ -154,7 +83,6 @@
           </button>
         </div>
       </nav>
-      <!-- 活动公告 -->
       <!-- 活动公告 -->
       <nav
         id="eventinfo"
@@ -259,7 +187,9 @@
   </div>
 </template>
 <script>
+import bigCard from "@/components/bigCard.vue";
 export default {
+  components: { bigCard },
   data() {
     return {
       show: true,
@@ -601,7 +531,7 @@ a:hover {
 #main {
   margin: 0 auto;
   padding: 0;
-  max-width: 1229px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -623,123 +553,6 @@ a:hover {
   margin-bottom: 14px;
   font-size: 24px;
   font-weight: 700;
-}
-/* 卡片 */
-#cl_card {
-  flex-flow: row wrap;
-  display: flex;
-  /* margin-right: -30px; 比起这个flex更赞👇*/
-  justify-content: space-around;
-  align-items: center;
-}
-#cl_card_item {
-  width: 380px;
-  box-shadow: 0 4px 16px 0 rgba(124, 142, 227, 0.12);
-  border-radius: 12px;
-  box-sizing: border-box;
-  display: inline-block;
-  z-index: 996;
-  margin-bottom: 30px;
-}
-.card_item_box {
-  box-sizing: border-box;
-}
-.cit_box_top {
-  overflow: hidden;
-}
-.card_bg {
-  width: 100%;
-  height: 200px;
-  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/cloud-class.ae3edb05d5eb6d0bd170.png);
-  border-radius: 12px 12px 0 0;
-  box-sizing: border-box;
-}
-
-.cit_box_bottom {
-  padding: 0 20px;
-  width: 100%;
-  font-size: 16px;
-  color: #293040;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 16px;
-  border-radius: 12px;
-}
-.cit_title {
-  font-weight: 700;
-}
-.cit_info {
-  margin-top: 8px;
-  margin-bottom: 16px;
-  color: #959eb2;
-  font-size: 12px;
-  align-items: center;
-}
-.cit_info_userlogo {
-  background-position: -508px -192px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/classroom.sprite.a8c4b583317a1934d9f5.png?);
-}
-.cit_info_schlogo {
-  background-position: -240px -468px;
-  width: 16px;
-  height: 16px;
-  background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/classroom.sprite.a8c4b583317a1934d9f5.png?);
-}
-.cit_info_time {
-  display: block;
-}
-.cit_info_time > span {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 2px 8px;
-  position: relative;
-  left: 150px;
-  float: right;
-}
-.cit_content {
-  height: 48px;
-  line-height: 24px;
-  width: 100%;
-  font-size: 14px;
-  color: #5e6678;
-  overflow: hidden;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  letter-spacing: 0.5px;
-  word-break: break-all;
-  margin-top: 8px;
-}
-.cit_hr {
-  margin-top: 5px;
-  width: 100%;
-  height: 1px;
-  opacity: 0.05;
-  background: #000;
-}
-.cit_state {
-  overflow: hidden;
-  padding: 14px 0;
-}
-.cit_state > span {
-  font-size: 14px;
-  text-align: center;
-  line-height: 20px;
-  color: #e41f2b;
-  padding: 2px 4px;
-  border-radius: 2px;
-  background-color: rgba(228, 31, 43, 0.1);
-  float: right;
-}
-.card_item_box:hover {
-  border-radius: 12px;
-  transform: translateY(-15px);
-  overflow: hidden;
-  box-shadow: 0 14px 16px 0 rgba(150, 142, 227, 0.3);
 }
 /* 活动公告 */
 .ef_bg {
