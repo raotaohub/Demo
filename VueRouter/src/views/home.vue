@@ -61,7 +61,7 @@
           </button>
         </div>
       </nav>
-
+      <!--  -->
       <nav id="teachingmarket">
         <!-- 标题 -->
         <section class="cl_title justify-content-center text-center">
@@ -458,6 +458,7 @@ export default {
 </script>
 
 <style scoped>
+@import url("../style/big_card.css");
 body {
   font-family: PingFang SC, PingFangSC-Regular, Helvetica Neue,
     Microsoft YaHei Regular, Microsoft YaHei, 宋体, "sans-serif";

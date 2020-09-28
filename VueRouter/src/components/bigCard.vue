@@ -1,5 +1,5 @@
 <template>
-  <div id="#cl_card">
+  <div id="cl_card">
     <a
       :href="item.url"
       class="text-decoration-none"
@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url(../style/big_card.css);
 
 </style>

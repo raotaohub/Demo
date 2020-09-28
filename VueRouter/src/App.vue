@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 body {
   font-family: PingFang SC, PingFangSC-Regular, Helvetica Neue,
     Microsoft YaHei Regular, Microsoft YaHei, 宋体, "sans-serif";

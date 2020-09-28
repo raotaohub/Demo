@@ -1,6 +1,6 @@
 <template>
   <!-- 本卡片组件一行显示4列 -->
-  <div>
+  <div id="cl_card">
     <a
       :href="item.url"
       class="text-decoration-none"
@@ -27,10 +27,10 @@
               <span class v-show="item.time !== ''">{{ item.time }}</span>
             </div>
           </div>
-          <div class="cit_hr"></div>
+          <!-- <div class="cit_hr"></div>
           <div class="cit_state">
             <span>{{ item.state }}</span>
-          </div>
+          </div> -->
           <div class="clearfix"></div>
         </div>
       </nav>
@@ -52,12 +52,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("../style/cl_card");
 .card_bg {
   width: 100%;
   height: 200px;
-  /* width: 280px; */
   background-image: url(https://res.devcloud.huaweicloud.com/obsdevui/diploma/8.1.24.002/index-cloud.07a57744ef9e998461a5.png);
   border-radius: 12px 12px 0 0;
   box-sizing: border-box;

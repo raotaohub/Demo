@@ -7,6 +7,9 @@ import Router from 'vue-router'
 import home from '@/views/home.vue'
 import kunpeng from '@/views/kunpeng.vue'
 import experimentalclass from '@/views/experimentalclass.vue'
+// kunpeng的子路由
+import list from '@/views/course/list.vue'
+
 // course的子路由
 import cloudclassroom from '@/views/course/cloudclassroom.vue'
 import cloudlab from '@/views/course/cloudlab.vue'
@@ -32,6 +35,15 @@ export default new Router({
       path: '/kunpeng',
       name: 'kunpeng',
       component: kunpeng,
+      children: [
+        {
+          path: 'list',
+          name: 'list',
+          component: list,
+        },
+      ]
+
+
     },
     { // experimentalclass
       path: '/experimentalclass',

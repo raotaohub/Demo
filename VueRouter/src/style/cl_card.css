@@ -106,14 +106,11 @@ a:hover {
   margin-right: 20px;
   transition: all 0.35s;
 }
+
 #cl_card_item:hover {
   border-radius: 12px;
   transform: translateY(-6px);
   box-shadow: 0 16px 20px 0 rgba(124, 142, 227, 0.24);
-}
-
-.card_item_box {
-  
 }
 
 .cit_box_top {
