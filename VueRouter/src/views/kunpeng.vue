@@ -1,155 +1,238 @@
 <template>
-  <div id="kunpeng" class="kunpeng">
-    <div id="banner_box" class="container-fluid mb-5">
-      <div class="banner_list">
-        <a
-          class="banner_list_card col-4-mr-10"
-          :href="item.url"
-          v-for="(item, index) in banner_list"
-          :key="index"
-        >
-          <div class="banner_item_box d-inline-block">
-            <div class="banner_item">
-              <div
-                class="banner_left"
-                :style="{ backgroundImage: 'url(' + item.img + ')' }"
-              ></div>
-              <div class="banner_right">
-                <div class="banner_title d-block">{{ item.title }}</div>
-                <div class="banner_content d-block">{{ item.content }}</div>
+  <div>
+    <div id="kunpeng" class="kunpeng container-fluid m-0 p-0" v-show="isShow">
+      <div id="banner_box" class="container-fluid mb-5">
+        <div class="banner_list">
+          <a
+            class="banner_list_card col-4-mr-10"
+            :href="item.url"
+            v-for="(item, index) in banner_list"
+            :key="index"
+          >
+            <div class="banner_item_box d-inline-block">
+              <div class="banner_item">
+                <div
+                  class="banner_left"
+                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
+                ></div>
+                <div class="banner_right">
+                  <div class="banner_title d-block">{{ item.title }}</div>
+                  <div class="banner_content d-block">{{ item.content }}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="main-layout free-course">
-      <section class="cl_title justify-content-center mb-4">
-        <span style="font-size: 28px">免费课程 </span>
-        <a style="font-size: 16px; color: #575d6c" href="/home/kunpeng/list"
-          >查看更多></a
-        >
-      </section>
-      <section class="cl_card mb-5">
-        <div id="cl_card">
-          <a
-            :href="item.url"
-            class="text-decoration-none"
-            target="_blank"
-            id="cl_card_item"
-            v-for="(item, index) in freeCourseList"
-            :key="index"
+      <div class="main-layout free-course">
+        <section class="cl_title justify-content-center mb-4">
+          <span style="font-size: 28px">免费课程 </span>
+          <router-link
+            style="font-size: 16px; color: #575d6c"
+            to="/kunpeng/list"
+            ><span @click="isList">查看更多</span></router-link
           >
-            <nav class="card_item_box">
-              <div class="cit_box_top">
-                <div
-                  class="card_bg"
-                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                ></div>
-              </div>
-              <div class="cit_box_bottom">
-                <span class="cit_title">{{ item.title }}</span>
+        </section>
+        <section class="cl_card mb-2">
+          <div id="cl_card">
+            <a
+              :href="item.url"
+              class="text-decoration-none"
+              target="_blank"
+              id="cl_card_item"
+              v-for="(item, index) in freeCourseList"
+              :key="index"
+            >
+              <nav class="card_item_box">
+                <div class="cit_box_top">
+                  <div
+                    class="card_bg"
+                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
+                  ></div>
+                </div>
+                <div class="cit_box_bottom">
+                  <span class="cit_title">{{ item.title }}</span>
 
-                <div class="cit_state">
-                  <span class="float-right bg-white text-body">{{ item.state }}</span>
-                  <span class="float-left bg-white text-body">HOT</span>
+                  <div class="cit_state">
+                    <span class="float-right bg-white text-body">{{
+                      item.state
+                    }}</span>
+                    <span class="float-left bg-white text-body">HOT</span>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-              </div>
-            </nav>
-          </a>
-        </div>
-      </section>
-      <section class="cl_title justify-content-center mb-4">
-        <span style="font-size: 28px">专业课程 </span>
-        <a style="font-size: 16px; color: #575d6c" href="/home/kunpeng/list"
-          >查看更多></a
-        >
-      </section>
-      <section class="cl_card mb-5">
-        <div id="cl_card">
-          <a
-            :href="item.url"
-            class="text-decoration-none"
-            target="_blank"
-            id="cl_card_item2"
-            v-for="(item, index) in courseList"
-            :key="index"
+              </nav>
+            </a>
+          </div>
+        </section>
+        <section class="cl_title justify-content-center mb-4">
+          <span style="font-size: 28px">专业课程 </span>
+          <router-link
+            style="font-size: 16px; color: #575d6c"
+            to="/kunpeng/list"
+            ><span @click="isList">查看更多</span></router-link
           >
-            <nav class="card_item_box">
-              <div class="cit_box_top">
-                <div
-                  class="card_bg"
-                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                  style="height: 158px"
-                ></div>
-              </div>
-              <div class="cit_box_bottom">
-                <div class="clearfix"></div>
-                <span class="cit_title d-block">{{ item.title }}</span>
-                <div class="cit_state">
-                  <span class="float-right bg-white text-body">{{ item.state }}</span>
-                  <span class="float-left bg-white text-body">HOT</span>
+        </section>
+        <section class="cl_card mb-2">
+          <div id="cl_card">
+            <a
+              :href="item.url"
+              class="text-decoration-none"
+              target="_blank"
+              id="cl_card_item2"
+              v-for="(item, index) in courseList"
+              :key="index"
+            >
+              <nav class="card_item_box">
+                <div class="cit_box_top">
+                  <div
+                    class="card_bg"
+                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
+                    style="height: 158px"
+                  ></div>
                 </div>
-                <div class="clearfix"></div>
-              </div>
-            </nav>
-          </a>
-        </div>
-      </section>
-      <section class="cl_title justify-content-center mb-4">
-        <span style="font-size: 28px">实训课程 </span>
-        <a style="font-size: 16px; color: #575d6c" href="/home/kunpeng/list"
-          >查看更多></a
-        >
-      </section>
-      <section class="cl_card mb-5">
-        <div id="cl_card">
-          <a
-            :href="item.url"
-            class="text-decoration-none"
-            target="_blank"
-            id="cl_card_item"
-            v-for="(item, index) in practice_course"
-            :key="index"
+                <div class="cit_box_bottom">
+                  <div class="clearfix"></div>
+                  <span class="cit_title d-block">{{ item.title }}</span>
+                  <div class="cit_state">
+                    <span class="float-right bg-white text-body">{{
+                      item.state
+                    }}</span>
+                    <span class="float-left bg-white text-body">HOT</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </nav>
+            </a>
+          </div>
+        </section>
+        <section class="cl_title justify-content-center mb-4">
+          <span style="font-size: 28px">实训课程 </span>
+          <router-link
+            style="font-size: 16px; color: #575d6c"
+            to="/kunpeng/list"
+            ><span @click="isList">查看更多</span></router-link
           >
-            <nav class="card_item_box">
-              <div class="cit_box_top">
-                <div
-                  class="card_bg"
-                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                  style="height: 60px;"
-                ></div>
-              </div>
-              <div class="cit_box_bottom">
-                <span class="cit_title">{{ item.title }}</span>
-                <div style="height: 80px;">
-                  <ul class=" m-0" 
-                  v-for="(i, key) in practice_course[index].content"
-                  :key="key"
-                >
-                  <li>{{ i }}</li>
-                </ul>
+        </section>
+        <section class="cl_card mb-3">
+          <div id="cl_card">
+            <a
+              :href="item.url"
+              class="text-decoration-none"
+              target="_blank"
+              id="cl_card_item"
+              v-for="(item, index) in practice_course"
+              :key="index"
+            >
+              <nav class="card_item_box">
+                <div class="cit_box_top">
+                  <div
+                    class="card_bg"
+                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
+                    style="height: 60px"
+                  ></div>
                 </div>
-                <div class="cit_hr"></div>
-                <div class="cit_state">
-                  <span class="float-right bg-white text-body">{{ item.state }}</span>
-                  <span class="float-left bg-white text-body">所属分类：{{item.type}}</span>
+                <div class="cit_box_bottom">
+                  <span class="cit_title">{{ item.title }}</span>
+                  <div style="height: 80px">
+                    <ul
+                      class="m-0"
+                      v-for="(i, key) in practice_course[index].content"
+                      :key="key"
+                    >
+                      <li>{{ i }}</li>
+                    </ul>
+                  </div>
+                  <div class="cit_hr"></div>
+                  <div class="cit_state">
+                    <span class="float-right bg-white text-body">{{
+                      item.state
+                    }}</span>
+                    <span class="float-left bg-white text-body"
+                      >所属分类：{{ item.type }}</span
+                    >
+                  </div>
                 </div>
                 <div class="clearfix"></div>
-              </div>
-            </nav>
-          </a>
+              </nav>
+            </a>
+          </div>
+        </section>
+      </div>
+      <footer class="footer_partner" style="height: 220px">
+        <div class="main-layout">
+          <section class="cl_title justify-content-center mb-4 text-center">
+            <h3 class="partner_title text-align-center">合作伙伴</h3>
+            <div v-for="(item, index) in partnerList" :key="index" class="">
+              <a class="footer_box float-left col-3 mr-n1 p-0" :href="item.url">
+                <div
+                  class="partner_bg"
+                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
+                  style="background-size: 93px 24px"
+                ></div>
+                <div class="partner_name text-left text-muted pr-3 mb-1 mt-1">
+                  {{ item.name }}
+                </div>
+                <div class="partner_content text-left text-muted pr-3">
+                  {{ item.content }}
+                </div>
+                <div class="clearfix"></div>
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
+      </footer>
+      <Footer></Footer>
     </div>
+    <router-view class="main-layout"></router-view>
   </div>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 export default {
+  components: { Footer },
+  methods: {
+    bpyStyle(index) {
+      return (index *= -200);
+    },
+    isList() {
+      this.isShow = !this.isShow;
+    },
+  },
   data() {
     return {
+      isShow: true,
+      partnerList: [
+        {
+          url: "https://yun.ictedu.com/",
+          name: "北京博海迪信息科技有限公司",
+          img: require("../assets/taike.010bb6dd1ea56b4db5b0.png"),
+          content:
+            "泰克聚焦于ICT领域产教融合平台开发与应用、人才培养、产教融合基地和院校专业共建等",
+        },
+        {
+          url: "http://zhyx.zhiqiantong.cn/",
+          name: "深圳市讯方技术股份有限公司",
+          img: require("../assets/xunfang.4efc2a9f94fdd770dda2.png"),
+          content:
+            "讯方致力于软件与信息技术服务和ICT技术人才培养，为高校提供专业建设及校企合作解决方案",
+        },
+        {
+          url: "https://zhjxy.kp.futurelab.tv/",
+          name: "北京中软国际教育科技股份有限公司",
+          img: require("../assets/zhongruan.84a9e9a27ee7ba3326b6.png"),
+          content:
+            "中软国际人才战略的核心组成部分之一，承担集团发展过程中人才储备及培养任务",
+        },
+        {
+          url: "https://kphcia.gaoxiaobang.com/#/courses",
+          name: "慧科教育科技集团有限公司",
+          img: require("../assets/huike.77763a77b209226d0f1e.png"),
+          content:
+            "慧科教育科技集团有限公司是中国高等教育和新职业教育领域领军企业",
+        },
+      ],
       banner_list: [
         {
           url: "",
@@ -283,8 +366,7 @@ export default {
           content: ["OA系统搭建", "OA系统的业务流程", "OA系统运维实践"],
           state: "华为认证",
           img: require("../assets/shixun1.21fa96c7eba975a20d8a.png"),
-          type:"实施部署"
-
+          type: "实施部署",
         },
         {
           url:
@@ -293,8 +375,7 @@ export default {
           content: ["文件管理系统相关云服务", "百万级文件管理系统"],
           state: "华为认证",
           img: require("../assets/shixun2.ff3648b132f133de0fe1.png"),
-          type:"实施部署"
-
+          type: "实施部署",
         },
         {
           url:
@@ -307,7 +388,7 @@ export default {
           ],
           state: "华为认证",
           img: require("../assets/shixun3.d773b20c7da5d28ba48d.png"),
-          type:"系统运维"
+          type: "系统运维",
         },
       ],
     };
@@ -318,6 +399,15 @@ export default {
 <style scoped>
 @import url("../style/big_card.css");
 /* @import url("../style/cl_card.css"); */
+a {
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
+.title_list_btn:hover,
+a:hover {
+  color: #007bff !important;
+}
 #banner_box {
   position: relative;
   height: 470px;
@@ -333,11 +423,11 @@ export default {
   position: absolute;
   bottom: -63px;
   margin: 0 auto;
-  left: 25%;
-  transform: translateX(-15%);
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
   margin: 0 auto;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   box-sizing: border-box;
 }
 .banner_list_card {
@@ -418,5 +508,29 @@ export default {
 #cl_card_item2:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 16px 0 rgba(150, 142, 227, 0.3);
+}
+
+.footer_partner {
+  padding-bottom: 15px;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+}
+.partner_title {
+  padding: 40px 0 20px;
+  color: #222325;
+}
+.footer_box {
+  margin-right: 2s6px;
+}
+.partner_bg {
+  height: 42px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.partner_name {
+  font-size: 0.875rem;
+}
+.partner_content {
+  font-size: 0.75rem;
 }
 </style>

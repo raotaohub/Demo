@@ -42,8 +42,6 @@ export default new Router({
           component: list,
         },
       ]
-
-
     },
     { // experimentalclass
       path: '/experimentalclass',

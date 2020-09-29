@@ -1,71 +1,68 @@
 <template>
-    <header class="container-fluid" id="header">
-      <div class="row">
-        <div class="header_log"></div>
-        <div class="header_center row-vertical-center">
-          <div class="header_center_box router-link-active">
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/home"
-              >首页</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/kunpeng"
-              >鲲鹏教育中心</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/cloudclassroom"
-              >MOOC课程</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/experimentalclass"
-              >培训认证</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/cloudlab"
-              >在线实验</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/microauthentication"
-              >教学市场</router-link
-            >
-            <router-link
-              class="text-center hover text-decoration-none"
-              to="/teachingmarket"
-              >新工科实验班</router-link
-            >
-            <a
-              class="text-center hover text-decoration-none"
-              href="https://bbs.huaweicloud.com/forum/forumdisplay-fid-708-orderby-lastpost.html"
-              >学习交流</a
-            >
-          </div>
+  <header class="container-fluid" id="header">
+    <div class="row">
+      <div class="header_log"></div>
+      <div class="header_center row-vertical-center">
+        <div class="header_center_box router-link-active">
+          <router-link class="text-center hover text-decoration-none" to="/home"
+            >首页</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/kunpeng"
+            >鲲鹏教育中心</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/cloudclassroom"
+            >MOOC课程</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/experimentalclass"
+            >培训认证</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/cloudlab"
+            >在线实验</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/microauthentication"
+            >教学市场</router-link
+          >
+          <router-link
+            class="text-center hover text-decoration-none"
+            to="/teachingmarket"
+            >新工科实验班</router-link
+          >
+          <a
+            class="text-center hover text-decoration-none"
+            href="https://bbs.huaweicloud.com/forum/forumdisplay-fid-708-orderby-lastpost.html"
+            >学习交流</a
+          >
         </div>
-        <div class="header_login row-vertical-center">
-          <div>
-            <button type="button" class="btn header_btn">
-              <span class="hover text-decoration-none">教学平台</span>
-            </button>
-          </div>
-          <div style="font-size: 14px">
-            <span>
-              <a href class="hover text-body text-decoration-none">登录</a>
-            </span>
-            <span style="margin: 0 14px">|</span>
-            <span>
-              <a href class="hover text-body text-decoration-none">注册</a>
-            </span>
-          </div>
-        </div>
-
-        <div class="clear"></div>
       </div>
-    </header>
+      <div class="header_login row-vertical-center">
+        <div>
+          <button type="button" class="btn header_btn">
+            <span class="hover text-decoration-none">教学平台</span>
+          </button>
+        </div>
+        <div style="font-size: 14px">
+          <span>
+            <a href class="hover text-body text-decoration-none">登录</a>
+          </span>
+          <span style="margin: 0 14px">|</span>
+          <span>
+            <a href class="hover text-body text-decoration-none">注册</a>
+          </span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </header>
 </template>
 
 <script>

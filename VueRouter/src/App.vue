@@ -10,6 +10,7 @@
 
 <script>
 import myHeader from "@/components/Header.vue";
+
 export default {
   components: { myHeader },
   name: "App",
