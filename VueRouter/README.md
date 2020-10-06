@@ -1,6 +1,6 @@
 # huaweicloud
 
-> A Vue.js project 这个小项目是我用Vue重构的[华为云-Classroom](https://classroom.devcloud.huaweicloud.com/home)
+> A Vue.js project 这个小项目是我用Vue重构的[华为云-Classroom](https://classroom.devcloud.huaweicloud.com/home)这是目标网页
 
 + 在首页用bootstrap做的轮播图，尝试了一下响应式的页面开发
 
