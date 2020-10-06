@@ -1,6 +1,9 @@
 # huaweicloud
 
-> A Vue.js project
+> A Vue.js project 这个小项目是我用Vue重构的[华为云-Classroom](https://classroom.devcloud.huaweicloud.com/home)
++__在首页用bootstrap做的轮播图__
++__在MOOC课程页面运用了Vue-router子路由功能，同时实现了按标签分类__
++__抽象出了Hearder、Card、Tag组件实现了部分复用__
 
 ## Build Setup
 
