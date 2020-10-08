@@ -235,13 +235,13 @@ export default {
       ],
       banner_list: [
         {
-          url: "",
+          url: "/kunpeng/list",
           img: require("../assets/banner-icon1.88b81a3227353700239e.png"),
           title: "华为出品课程",
           content: "鲲鹏云知识权威解读",
         },
         {
-          url: "",
+          url: "/kunpeng/list",
           img: require("../assets/banner-icon2.351f69b53489ac674844.png"),
           title: "合作方精品课程",
           content: "海量干货资源云集",

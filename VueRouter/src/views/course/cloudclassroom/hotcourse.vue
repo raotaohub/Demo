@@ -24,7 +24,6 @@ export default {
   props: {
     bpyStyle: Function,
   },
-
   components: { Card, Tag },
 
   computed: {
