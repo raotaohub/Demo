@@ -1,23 +1,43 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: 'App'
-}
+  name: "App",
+  data() {
+    return {};
+  },
+  created() {},
+  methods: {
+    getMockData() {
+      // 发送ajax 请求
+      axios
+        .get("/api/get/news")
+        .then((response) => {
+          // 得到返回结果数据
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      axios
+        .post("/api/post/news")
+        .then((response) => {
+          // 得到返回结果数据
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
