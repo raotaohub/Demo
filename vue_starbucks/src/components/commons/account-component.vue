@@ -1,12 +1,12 @@
 <template>
   <div class="account-components">
     <router-link to="/account">
-      <img src="@/assets/icons/icon-account.svg" alt="" />
+      <img src="@/assets/icons/icon-account.svg" />
       <button type="button" class="sign-smile btn text-success mr-4">
         登录
       </button>
     </router-link>
-    <router-link to="/account/register">
+    <router-link to="/account">
       <button type="button" class="logon-smile btn btn-outline-success">
         注册
       </button>
@@ -20,11 +20,8 @@ export default {};
 
 <style>
 .logon-smile {
-  padding: 2px 12px;
-  background: none;
   border: 1px solid #00a862;
   border-radius: 48px;
-  box-sizing: border-box;
   color: #00a862;
   display: inline-block;
   font-weight: 500;
@@ -32,7 +29,5 @@ export default {};
   overflow: hidden;
   padding: 6px 18px;
   position: relative;
-  transition-duration: 0.1s;
-  transition-property: background, border-color, color;
 }
 </style>

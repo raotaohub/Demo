@@ -25,40 +25,47 @@
           <div class="display-happy">
             <span>心情惬意，来杯咖啡吧 ☕</span>
           </div>
-          <div class="account-components">
-            <router-link to="/account">
-              <img src="@/assets/icons/icon-account.svg" alt="" />
-              <button type="button" class="sign-smile btn text-success mr-4">
-                登录
-              </button>
-            </router-link>
-            <router-link to="/account/register">
-              <button type="button" class="logon-smile btn btn-outline-success">
-                注册
-              </button>
-            </router-link>
-          </div>
+          <account-component></account-component>
         </div>
       </div>
     </nav>
     <section id="content">
-      
+      <div class="tag_ad">广告</div>
+      <carousel-index></carousel-index>
+      <promotion></promotion>
+      <programClub></programClub>
+      <tmall></tmall>
+      <section>星巴克精选</section>
+      <section>1912派克街</section>
+      <footer id="footer">
+        <div class=""></div>
+      </footer>
     </section>
   </div>
 </template>
 
 <script>
-import "../css/init.css";
-import "../css/common-font.css";
+import accountComponent from "../components/commons/account-component";
+import carouselIndex from "../components/commons/carouselIndex.vue";
+import promotion from "../components/commons/promotion.vue";
+import programClub from "../components/commons/programClub.vue";
+import tmall from "../components/commons/tmall.vue";
+
 export default {
-  name: "index",
-  data() {
-    return {};
+  components: {
+    accountComponent,
+    carouselIndex,
+    promotion,
+    programClub,
+    tmall,
   },
 };
 </script>
 
-<style>
+<style >
+@import "../css/init.css";
+@import "../css/common-font.css";
+
 .container {
   margin: 0;
   padding: 0;
@@ -148,5 +155,23 @@ export default {
   padding-bottom: 24px;
   padding-top: 24px;
   width: 70%;
+  position: relative;
+}
+
+/* swipe轮播图 */
+
+/* 广告字样 */
+.tag_ad {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0px 6px;
+  color: #fff;
+  background-color: #000;
+  font-size: 12px;
+  line-height: 180%;
+  opacity: 0.6;
+  border-radius: 2px;
+  z-index: 200;
 }
 </style>
