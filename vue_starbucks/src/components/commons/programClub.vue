@@ -4,8 +4,8 @@
     <div class="club-box row">
       <!-- 有几个col就表示每个col的标签 占父元素 col数量/100 这里两个col所以是每个占50%-->
       <div class="club-left col">
-        <h2 class="h2 mb-3">星享俱乐部</h2>
-        <p class="text-secondary h5">
+        <h2 class="h2 mb-4">星享俱乐部</h2>
+        <p class="text-secondary mb-4 ">
           开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。<a
             class="text-success"
             href="https://www.starbucks.com.cn/account/starbucks-rewards"
@@ -35,8 +35,6 @@ export default {
 </script>
 
 <style>
-@import "../../css/init.css";
-@import "../../css/common-font.css";
 h1,
 h2,
 h3,
@@ -46,7 +44,8 @@ h6 {
   margin-bottom: 18px;
 }
 .program-club {
-  background: white;
+  overflow: hidden;
+  z-index: 100;
 }
 .club-box {
   display: flex;

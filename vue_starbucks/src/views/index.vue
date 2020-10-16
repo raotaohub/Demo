@@ -2,44 +2,78 @@
   <div id="wrapper">
     <!-- Navigation panel -->
     <nav id="nav">
-      <header class="header">
-        <router-link to="/" class="logo"
-          ><img src="@/assets/image/logo.svg"
-        /></router-link>
-        <router-link to="/stores" class="stores"
-          ><span class="primary">门店</span></router-link
-        >
-        <router-link to="/account" class="account"
-          ><span class="primary">我的账户</span></router-link
-        >
-        <router-link to="/menu" class="menu"
-          ><span class="primary">菜单</span></router-link
-        >
-        <div class="hamburger">
-          <img src="@/assets/icons/icon-hamburger.svg" />
-        </div>
-        <div class="clearfix"></div>
-      </header>
-      <div class="body">
-        <div class="account-entry">
-          <div class="display-happy">
-            <span>心情惬意，来杯咖啡吧 ☕</span>
+      <article class="homeactive" v-show="!isActive">
+        <header class="header">
+          <router-link to="/" class="logo"
+            ><img src="@/assets/image/logo.svg"
+          /></router-link>
+          <router-link to="/stores" class="stores"
+            ><span class="primary">门店</span></router-link
+          >
+          <router-link to="/account" class="account"
+            ><span class="primary">我的账户</span></router-link
+          >
+          <router-link to="/menu" class="menu"
+            ><span class="primary">菜单</span></router-link
+          >
+          <!-- 下拉霸 -->
+          <button
+            class="hamburger toogle btn btn-outline-white"
+            @click="menuShow"
+          ></button>
+          <div class="clearfix"></div>
+        </header>
+        <div class="body">
+          <div class="account-entry">
+            <div class="display-happy">
+              <span>心情惬意，来杯咖啡吧 ☕</span>
+            </div>
+            <account-component></account-component>
           </div>
-          <account-component></account-component>
         </div>
-      </div>
+      </article>
+      <article class="homeclose" v-show="isActive">
+        <header class="header">
+          <router-link to="/" class="logo"
+            ><img src="@/assets/image/logo.svg"
+          /></router-link>
+
+          <!-- 下拉霸 -->
+          <button
+            class="hamburger close btn btn-outline-white"
+            @click="menuShow"
+          ></button>
+          <div class="clearfix"></div>
+        </header>
+        <div class="account-entry">
+          <ul v-for="(item, index) in homeList" :key="index">
+            <li class="pt-2 pb-1">
+              <router-link class="h5 font-weight-bold" :to="item.path">{{
+                item.title
+              }}</router-link>
+            </li>
+          </ul>
+          <hr />
+          <account-component></account-component>
+          <footer class="d-block mt-3">
+            <ul class="d-block text-secondary">
+              <li class="d-inline-block">English |</li>
+              <li class="d-inline-block">隐私政策 |</li>
+              <li class="d-inline-block">使用条款</li>
+            </ul>
+          </footer>
+        </div>
+      </article>
     </nav>
     <section id="content">
+      <router-view></router-view>
       <div class="tag_ad">广告</div>
       <carousel-index></carousel-index>
       <promotion></promotion>
       <programClub></programClub>
       <tmall></tmall>
-      <section>星巴克精选</section>
-      <section>1912派克街</section>
-      <footer id="footer">
-        <div class=""></div>
-      </footer>
+      <coffee-house></coffee-house>
+      <license></license>
     </section>
   </div>
 </template>
@@ -50,6 +84,8 @@ import carouselIndex from "../components/commons/carouselIndex.vue";
 import promotion from "../components/commons/promotion.vue";
 import programClub from "../components/commons/programClub.vue";
 import tmall from "../components/commons/tmall.vue";
+import coffeeHouse from "../components/commons/coffeehouse.vue";
+import license from "../components/commons/license.vue";
 
 export default {
   components: {
@@ -58,120 +94,74 @@ export default {
     promotion,
     programClub,
     tmall,
+    coffeeHouse,
+    license,
+  },
+  data() {
+    return {
+      homeList: [
+        {
+          title: "门店",
+          path: "/stores",
+        },
+        {
+          title: "星享俱乐部",
+          path: "",
+        },
+        {
+          title: "菜单",
+          path: "/menu",
+        },
+        {
+          title: "星巴克移动应用",
+          path: "",
+        },
+        {
+          title: "星礼卡",
+          path: "",
+        },
+        {
+          title: "星巴克甄选™",
+          path: "",
+        },
+        {
+          title: "咖快™ - 在线点 到店取",
+          path: "",
+        },
+        {
+          title: "专星送™",
+          path: "",
+        },
+        {
+          title: "咖啡星讲堂",
+          path: "",
+        },
+        {
+          title: "上海烘焙工坊",
+          path: "",
+        },
+        {
+          title: "关于星巴克",
+          path: "",
+        },
+        {
+          title: "帮助中心",
+          path: "",
+        },
+      ],
+      isActive: false,
+    };
+  },
+  methods: {
+    menuShow() {
+      this.isActive = !this.isActive;
+    },
   },
 };
 </script>
 
 <style >
 @import "../css/init.css";
+@import "../css/index.css";
 @import "../css/common-font.css";
-
-.container {
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 1025px) {
-  #nav {
-    background: #fff;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 30%;
-    /* height: 100%; */
-  }
-}
-
-/* 头部的字体 */
-.header {
-  height: 48px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  display: block;
-  padding: 24px;
-  position: relative;
-}
-.logo,
-.account,
-.stores,
-.menu {
-  float: left;
-  font-size: 1.6rem;
-  font-size: 16px;
-}
-
-.logo {
-  margin-right: 12px;
-  width: 36px;
-}
-
-.hamburger {
-  float: right;
-  line-height: 34px;
-}
-
-/* 账号登入 */
-.body {
-  height: calc(100% - 98px);
-  display: table;
-  width: 100%;
-}
-
-.account-entry {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 24px 0 84px;
-}
-.footer {
-  vertical-align: middle;
-}
-
-/* 按钮 */
-
-.sign-smile,
-.logon-smile {
-  padding: 2px 12px;
-  background: none;
-  border: 1px solid #00a862;
-  border-radius: 48px;
-  box-sizing: border-box;
-  color: #00a862;
-  display: inline-block;
-  font-weight: 500;
-  outline: none;
-  overflow: hidden;
-  padding: 6px 18px;
-  position: relative;
-  transition-duration: 0.1s;
-  transition-property: background, border-color, color;
-}
-
-/* 右边的 */
-#content {
-  left: auto;
-  margin-left: 30%;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  width: 70%;
-  position: relative;
-}
-
-/* swipe轮播图 */
-
-/* 广告字样 */
-.tag_ad {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 0px 6px;
-  color: #fff;
-  background-color: #000;
-  font-size: 12px;
-  line-height: 180%;
-  opacity: 0.6;
-  border-radius: 2px;
-  z-index: 200;
-}
 </style>
