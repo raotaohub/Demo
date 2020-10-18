@@ -1,52 +1,26 @@
 <template>
   <footer class id="footer">
     <nav class="container-fluid">
-      <div
-        class="footer_box justify-content-center text-left"
-        style="padding-top: 35px"
-      >
+      <div class="footer_box justify-content-center text-left" style="padding-top: 35px">
         <div class="clearfix">
           <div class="d-inline-block align-middle">
             <span class="info_left">版权所有 © 华为软件技术有限公司 2020</span>
             <span class="info_left">保留一切权利</span>
-            <a
-              class="info_left text-decoration-none a_link"
-              href="http://www.beian.miit.gov.cn"
-              target="_blank"
-              rel="nofollow"
-              >苏ICP备17040376号-32</a
-            >
+            <a class="info_left text-decoration-none a_link" href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">苏ICP备17040376号-32</a>
             <span class="info_left">苏B2-20130048号</span>
             <span class="info_left">代理域名注册服务机构：新网</span>
           </div>
           <div class="d-inline-block float-right">
-            <a
-              href="//www.huaweicloud.com/declaration/statement.html"
-              target="_blank"
-              rel="nofollow"
-              class="a_link"
-              >法律声明</a
-            >
+            <a href="//www.huaweicloud.com/declaration/statement.html" target="_blank" rel="nofollow" class="a_link">法律声明</a>
             <a class="d-inline-block" style="margin: 0 8px">|</a>
-            <a
-              href="//www.huaweicloud.com/declaration/sa_prp.html"
-              target="_blank"
-              rel="nofollow"
-              class="a_link"
-              >隐私政策</a
-            >
+            <a href="//www.huaweicloud.com/declaration/sa_prp.html" target="_blank" rel="nofollow" class="a_link">隐私政策</a>
           </div>
         </div>
 
         <div class="mt-2">
           <span class="goverment_logo_a"></span>
           <span class="goverment_logo_b"></span>
-          <a
-            href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010008"
-            target="_blank"
-            class="a_link"
-            >苏公网安备 32011402010008号</a
-          >
+          <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010008" target="_blank" class="a_link">苏公网安备 32011402010008号</a>
         </div>
       </div>
     </nav>

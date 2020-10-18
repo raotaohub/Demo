@@ -1,20 +1,10 @@
 <template>
   <!-- 本卡片组件一行显示4列 -->
   <div id="cl_card">
-    <a
-      :href="item.url"
-      class="text-decoration-none"
-      target="_blank"
-      id="cl_card_item"
-      v-for="(item, index) in newList"
-      :key="index"
-    >
+    <a :href="item.url" class="text-decoration-none" target="_blank" id="cl_card_item" v-for="(item, index) in newList" :key="index">
       <nav class="card_item_box">
         <div class="cit_box_top">
-          <div
-            class="card_bg"
-            :style="{ backgroundPositionY: `${bpyStyle(index)}` + 'px' }"
-          ></div>
+          <div class="card_bg" :style="{ backgroundPositionY: `${bpyStyle(index)}` + 'px' }"></div>
         </div>
         <div class="cit_box_bottom">
           <span class="cit_title">{{ item.title }}</span>

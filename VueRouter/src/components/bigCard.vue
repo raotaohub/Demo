@@ -1,19 +1,9 @@
 <template>
   <div id="cl_card">
-    <a
-      :href="item.url"
-      class="text-decoration-none"
-      target="_blank"
-      id="cl_card_item"
-      v-for="(item, index) in cardItemList"
-      :key="index"
-    >
+    <a :href="item.url" class="text-decoration-none" target="_blank" id="cl_card_item" v-for="(item, index) in cardItemList" :key="index">
       <nav class="card_item_box">
         <div class="cit_box_top">
-          <div
-            class="card_bg"
-            :style="{ backgroundPositionY: item.bpy + 'px' }"
-          ></div>
+          <div class="card_bg" :style="{ backgroundPositionY: item.bpy + 'px' }"></div>
         </div>
         <div class="cit_box_bottom">
           <span class="cit_title">{{ item.title }}</span>
@@ -54,5 +44,4 @@ export default {
 
 <style scoped>
 @import url(../style/big_card.css);
-
 </style>

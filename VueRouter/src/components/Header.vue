@@ -4,44 +4,14 @@
       <div class="header_log"></div>
       <div class="header_center row-vertical-center">
         <div class="header_center_box router-link-active">
-          <router-link class="text-center hover text-decoration-none" to="/home"
-            >首页</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/kunpeng"
-            >鲲鹏教育中心</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/cloudclassroom"
-            >MOOC课程</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/experimentalclass"
-            >培训认证</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/cloudlab"
-            >在线实验</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/microauthentication"
-            >教学市场</router-link
-          >
-          <router-link
-            class="text-center hover text-decoration-none"
-            to="/teachingmarket"
-            >新工科实验班</router-link
-          >
-          <a
-            class="text-center hover text-decoration-none"
-            href="https://bbs.huaweicloud.com/forum/forumdisplay-fid-708-orderby-lastpost.html"
-            >学习交流</a
-          >
+          <router-link class="text-center hover text-decoration-none" to="/home">首页</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/kunpeng">鲲鹏教育中心</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/cloudclassroom">MOOC课程</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/experimentalclass">培训认证</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/cloudlab">在线实验</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/microauthentication">教学市场</router-link>
+          <router-link class="text-center hover text-decoration-none" to="/teachingmarket">新工科实验班</router-link>
+          <a class="text-center hover text-decoration-none" href="https://bbs.huaweicloud.com/forum/forumdisplay-fid-708-orderby-lastpost.html">学习交流</a>
         </div>
       </div>
       <div class="header_login row-vertical-center">

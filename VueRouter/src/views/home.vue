@@ -1,27 +1,11 @@
 <template>
-  <div id="HOME" >
-    <div
-      id="carouselExampleIndicators "
-      class="carousel slide"
-      data-ride="carousel"
-    >
+  <div id="HOME">
+    <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators w-auto">
-        <li
-          data-target="#carouselExampleIndicators "
-          v-for="(item, index) in dataList"
-          :key="index"
-          :data-slide-to="index"
-          :class="{ active: currentIndex === index }"
-          @click="toggleClass(index)"
-        ></li>
+        <li data-target="#carouselExampleIndicators " v-for="(item, index) in dataList" :key="index" :data-slide-to="index" :class="{ active: currentIndex === index }" @click="toggleClass(index)"></li>
       </ol>
       <div class="carousel-inner">
-        <div
-          class="carousel-item"
-          v-for="(item, index) in dataList"
-          :class="{ active: currentIndex === index }"
-          :key="index"
-        >
+        <div class="carousel-item" v-for="(item, index) in dataList" :class="{ active: currentIndex === index }" :key="index">
           <a :href="dataList[index].url" target="_blank">
             <img :src="dataList[index].img" class="d-block w-100" />
           </a>
@@ -44,9 +28,7 @@
         <!-- 标题 -->
         <section class="cl_title justify-content-center text-center">
           <h3 class>云课堂</h3>
-          <span style="font-size: 16px; color: #575d6c"
-            >免费精品公开课，覆盖丰富知识点、课件与在线习题</span
-          >
+          <span style="font-size: 16px; color: #575d6c">免费精品公开课，覆盖丰富知识点、课件与在线习题</span>
         </section>
         <!-- 卡片 -->
         <section class="cl_card">
@@ -66,9 +48,7 @@
         <!-- 标题 -->
         <section class="cl_title justify-content-center text-center">
           <h3 class>教学市场</h3>
-          <span style="font-size: 16px; color: #575d6c"
-            >丰富教学资源辅助高效教学，免费习题库一键获取</span
-          >
+          <span style="font-size: 16px; color: #575d6c">丰富教学资源辅助高效教学，免费习题库一键获取</span>
         </section>
         <!-- 卡片 -->
         <section class="cl_card">
@@ -84,32 +64,16 @@
         </div>
       </nav>
       <!-- 活动公告 -->
-      <nav
-        id="eventinfo"
-        class="container-fluid"
-        style="margin-top: 51px; margin-bottom: 70px"
-      >
+      <nav id="eventinfo" class="container-fluid" style="margin-top: 51px; margin-bottom: 70px">
         <!-- 标题 -->
-        <section
-          class="cl_title eventinfo_title justify-content-center text-center"
-          style="margin-bottom: 51px"
-        >
+        <section class="cl_title eventinfo_title justify-content-center text-center" style="margin-bottom: 51px">
           <h3 class>活动公告</h3>
         </section>
         <!-- 卡片 -->
         <section id>
-          <div
-            class="eventinfo_box"
-            style="margin: 30px 0"
-            v-for="(item, index) in eventInfoList"
-            :key="index"
-          >
+          <div class="eventinfo_box" style="margin: 30px 0" v-for="(item, index) in eventInfoList" :key="index">
             <a :href="item.url">
-              <img
-                class="ef_bg"
-                alt
-                :style="{ backgroundPositionY: item.bpy + 'px' }"
-              />
+              <img class="ef_bg" alt :style="{ backgroundPositionY: item.bpy + 'px' }" />
             </a>
             <div class="ef_content d-inline-block" style="padding-bottom: 30px">
               <a class="text-decoration-none h5 text-body" href>{{
@@ -133,14 +97,14 @@
     <footer>
 
     </footer>
-   <Footer></Footer>
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import bigCard from "@/components/bigCard.vue";
 import Footer from "@/components/Footer.vue";
 export default {
-  components: { bigCard , Footer},
+  components: { bigCard, Footer },
   data() {
     return {
       show: true,

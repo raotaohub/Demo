@@ -20,38 +20,23 @@
         <section class="cl_title">
           <div class="cl_title_list d-flex justify-content-start">
             <ul class="title_list list-group d-block">
-              <router-link
-                class="router d-inline-block mr-4 mb-1"
-                to="/cloudclassroom/hotcourse"
-              >
+              <router-link class="router d-inline-block mr-4 mb-1" to="/cloudclassroom/hotcourse">
                 <li class="list-unstyled">热门课程</li>
               </router-link>
-              <router-link
-                class="router d-inline-block mr-4 mb-1"
-                to="/cloudclassroom/hotactivity"
-              >
+              <router-link class="router d-inline-block mr-4 mb-1" to="/cloudclassroom/hotactivity">
                 <li class="list-unstyled">热门活动</li>
               </router-link>
-              <router-link
-                class="router d-inline-block mr-4 mb-1"
-                to="/cloudclassroom/cloudcourse"
-              >
+              <router-link class="router d-inline-block mr-4 mb-1" to="/cloudclassroom/cloudcourse">
                 <li class="list-unstyled">云课程</li>
               </router-link>
-              <router-link
-                class="router d-inline-block mr-4 mb-1"
-                to="/cloudclassroom/character"
-              >
+              <router-link class="router d-inline-block mr-4 mb-1" to="/cloudclassroom/character">
                 <li class="list-unstyled">角色系列课程</li>
               </router-link>
             </ul>
           </div>
         </section>
         <!-- 卡片 -->
-        <router-view
-          :bpyStyle="bpyStyle"
-          style="max-width: 100vw"
-        ></router-view>
+        <router-view :bpyStyle="bpyStyle" style="max-width: 100vw"></router-view>
       </nav>
     </main>
   </div>

@@ -3,18 +3,10 @@
     <div id="kunpeng" class="kunpeng container-fluid m-0 p-0" v-show="isShow">
       <div id="banner_box" class="container-fluid mb-5">
         <div class="banner_list">
-          <a
-            class="banner_list_card col-4-mr-10"
-            :href="item.url"
-            v-for="(item, index) in banner_list"
-            :key="index"
-          >
+          <a class="banner_list_card col-4-mr-10" :href="item.url" v-for="(item, index) in banner_list" :key="index">
             <div class="banner_item_box d-inline-block">
               <div class="banner_item">
-                <div
-                  class="banner_left"
-                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                ></div>
+                <div class="banner_left" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
                 <div class="banner_right">
                   <div class="banner_title d-block">{{ item.title }}</div>
                   <div class="banner_content d-block">{{ item.content }}</div>
@@ -27,28 +19,14 @@
       <div class="main-layout free-course">
         <section class="cl_title justify-content-center mb-4">
           <span style="font-size: 28px">免费课程 </span>
-          <router-link
-            style="font-size: 16px; color: #575d6c"
-            to="/kunpeng/list"
-            ><span @click="isList">查看更多</span></router-link
-          >
+          <router-link style="font-size: 16px; color: #575d6c" to="/kunpeng/list"><span @click="isList">查看更多</span></router-link>
         </section>
         <section class="cl_card mb-2">
           <div id="cl_card">
-            <a
-              :href="item.url"
-              class="text-decoration-none"
-              target="_blank"
-              id="cl_card_item"
-              v-for="(item, index) in freeCourseList"
-              :key="index"
-            >
+            <a :href="item.url" class="text-decoration-none" target="_blank" id="cl_card_item" v-for="(item, index) in freeCourseList" :key="index">
               <nav class="card_item_box">
                 <div class="cit_box_top">
-                  <div
-                    class="card_bg"
-                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                  ></div>
+                  <div class="card_bg" :style="{ backgroundImage: 'url(' + item.img + ')' }"></div>
                 </div>
                 <div class="cit_box_bottom">
                   <span class="cit_title">{{ item.title }}</span>
@@ -67,29 +45,14 @@
         </section>
         <section class="cl_title justify-content-center mb-4">
           <span style="font-size: 28px">专业课程 </span>
-          <router-link
-            style="font-size: 16px; color: #575d6c"
-            to="/kunpeng/list"
-            ><span @click="isList">查看更多</span></router-link
-          >
+          <router-link style="font-size: 16px; color: #575d6c" to="/kunpeng/list"><span @click="isList">查看更多</span></router-link>
         </section>
         <section class="cl_card mb-2">
           <div id="cl_card">
-            <a
-              :href="item.url"
-              class="text-decoration-none"
-              target="_blank"
-              id="cl_card_item2"
-              v-for="(item, index) in courseList"
-              :key="index"
-            >
+            <a :href="item.url" class="text-decoration-none" target="_blank" id="cl_card_item2" v-for="(item, index) in courseList" :key="index">
               <nav class="card_item_box">
                 <div class="cit_box_top">
-                  <div
-                    class="card_bg"
-                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                    style="height: 158px"
-                  ></div>
+                  <div class="card_bg" :style="{ backgroundImage: 'url(' + item.img + ')' }" style="height: 158px"></div>
                 </div>
                 <div class="cit_box_bottom">
                   <div class="clearfix"></div>
@@ -108,38 +71,19 @@
         </section>
         <section class="cl_title justify-content-center mb-4">
           <span style="font-size: 28px">实训课程 </span>
-          <router-link
-            style="font-size: 16px; color: #575d6c"
-            to="/kunpeng/list"
-            ><span @click="isList">查看更多</span></router-link
-          >
+          <router-link style="font-size: 16px; color: #575d6c" to="/kunpeng/list"><span @click="isList">查看更多</span></router-link>
         </section>
         <section class="cl_card mb-3">
           <div id="cl_card">
-            <a
-              :href="item.url"
-              class="text-decoration-none"
-              target="_blank"
-              id="cl_card_item"
-              v-for="(item, index) in practice_course"
-              :key="index"
-            >
+            <a :href="item.url" class="text-decoration-none" target="_blank" id="cl_card_item" v-for="(item, index) in practice_course" :key="index">
               <nav class="card_item_box">
                 <div class="cit_box_top">
-                  <div
-                    class="card_bg"
-                    :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                    style="height: 60px"
-                  ></div>
+                  <div class="card_bg" :style="{ backgroundImage: 'url(' + item.img + ')' }" style="height: 60px"></div>
                 </div>
                 <div class="cit_box_bottom">
                   <span class="cit_title">{{ item.title }}</span>
                   <div style="height: 80px">
-                    <ul
-                      class="m-0"
-                      v-for="(i, key) in practice_course[index].content"
-                      :key="key"
-                    >
+                    <ul class="m-0" v-for="(i, key) in practice_course[index].content" :key="key">
                       <li>{{ i }}</li>
                     </ul>
                   </div>
@@ -148,9 +92,7 @@
                     <span class="float-right bg-white text-body">{{
                       item.state
                     }}</span>
-                    <span class="float-left bg-white text-body"
-                      >所属分类：{{ item.type }}</span
-                    >
+                    <span class="float-left bg-white text-body">所属分类：{{ item.type }}</span>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -165,11 +107,7 @@
             <h3 class="partner_title text-align-center">合作伙伴</h3>
             <div v-for="(item, index) in partnerList" :key="index" class="">
               <a class="footer_box float-left col-3 mr-n1 p-0" :href="item.url">
-                <div
-                  class="partner_bg"
-                  :style="{ backgroundImage: 'url(' + item.img + ')' }"
-                  style="background-size: 93px 24px"
-                ></div>
+                <div class="partner_bg" :style="{ backgroundImage: 'url(' + item.img + ')' }" style="background-size: 93px 24px"></div>
                 <div class="partner_name text-left text-muted pr-3 mb-1 mt-1">
                   {{ item.name }}
                 </div>
