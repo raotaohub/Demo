@@ -17,8 +17,8 @@ export default {
 <style scoped src="">
 .index {
   background: red;
-  height: 100%;
-  width: 30%;
+  height: 2%;
+  width: 10%;
   position: absolute;
   /* 这里跳转z-index可以控制显示层级 */
   /* z-index: 1; */

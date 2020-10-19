@@ -2,6 +2,8 @@
   <nav class="nav nav-left">
     <article class="homeactive" v-show="!$store.state.isActive">
       <header class="header">
+        <!-- 这里为了避免 router-link-active 选中路由后 自动添加类 所以改用a标签了;
+        当然也可以自己定义一个类都可以；***此条废除，还是改回router 因为可以避免页面刷新提高性能。详见官网第一句话~~***-->
         <router-link to="/" class="logo">
           <img src="@/assets/image/logo.svg" />
         </router-link>
@@ -12,6 +14,7 @@
         <button class="hamburger hamburgertoogle btn btn-outline-white" @click="menuShow"></button>
         <div class="clearfix"></div>
       </header>
+      <!-- home 起始页面 -->
       <div class="body">
         <div class="body" v-show="this.$route.path == '/'">
           <div class="account-entry">
@@ -21,7 +24,19 @@
             <account-component></account-component>
           </div>
         </div>
+        <!-- stores -->
+        <div class="body" v-show="this.$route.path == '/stores'">
+          <div class="account-entry">
+            <div class="display-happy">
+              <span class="display-happy">好无语</span>
+            </div>
+            <ul class="tabs-wrapper">
+              <li>
 
+              </li>
+            </ul>
+          </div>
+        </div>
         <!-- 菜单 /menu-->
         <div class="body" v-show="this.$route.path == '/menu'">
           <div class="account-entry">
@@ -31,7 +46,7 @@
             <ul class="tabs-wrapper" v-for="(item, index) in newMenuList.fitst_menu" :key="index">
               <li>
                 <!-- append 可以自动嵌套上一级路由地址，这样我模拟数据的path就不用写一长串了  -->
-                <router-link :to="item.path" append>{{item.title}}</router-link>
+                <router-link @click="addMenuClass(index)" :class="{'menuactive':index == menuClass}" :to="item.path" append>{{item.title}}</router-link>
               </li>
             </ul>
           </div>
@@ -46,8 +61,8 @@
               <span class="display-happy">饮料</span>
             </div>
             <ul class="tabs-wrapper" v-for="(item, index) in second_meun.beverages" :key="index">
-              <li>
-                <a href="">{{item.title}}</a>
+              <li @click="addMenuClass(index)">
+                <a :class="{'menuactive':index == menuClass}">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -62,8 +77,8 @@
               <span class="display-happy">饮料</span>
             </div>
             <ul class="tabs-wrapper" v-for="(item, index) in second_meun.food" :key="index">
-              <li>
-                <a href="">{{item.title}}</a>
+              <li @click="addMenuClass(index)">
+                <a :class="{'menuactive':index == menuClass}">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -78,8 +93,8 @@
               <span class="display-happy">饮料</span>
             </div>
             <ul class="tabs-wrapper" v-for="(item, index) in second_meun.coffee" :key="index">
-              <li>
-                <a href="">{{item.title}}</a>
+              <li @click="addMenuClass(index)">
+                <a :class="{'menuactive':index == menuClass}">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -94,21 +109,46 @@
               <span class="display-happy">饮料</span>
             </div>
             <ul class="tabs-wrapper" v-for="(item, index) in second_meun.merchandise" :key="index">
-              <li>
-                <a href="">{{item.title}}</a>
+              <li @click="addMenuClass(index)">
+                <a :class="{'menuactive':index == menuClass}">{{item.title}}</a>
               </li>
             </ul>
           </div>
         </div>
+
         <!-- account -->
-        <div class="body" v-show="this.$route.path == '/account'">
+        <div class="body" v-show="this.$route.path === '/account'">
           <div class="account-entry">
             <div class="display-happy">
               <span class="display-happy">登录或创建一个新账户🌟</span>
             </div>
             <ul class="tabs-wrapper" v-for="(item,index) in accountList" :key="index">
-              <li>
-                <router-link :to="item.path" append>{{item.title}}</router-link>
+              <li @click="addMenuClass(index)">
+                <router-link :class="{'menuactive':index == menuClass}" :to="item.path">{{item.title}}</router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="body" v-show="this.$route.path === '/account/register'">
+          <div class="account-entry">
+            <div class="display-happy">
+              <span class="display-happy">登录或创建一个新账户🌟</span>
+            </div>
+            <ul class="tabs-wrapper" v-for="(item,index) in accountList" :key="index">
+              <li @click="addMenuClass(index)">
+                <router-link :class="{'menuactive':index == menuClass}" :to="item.path">{{item.title}}</router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="body" v-show="this.$route.path === '/account/starbucks-rewards'">
+          <div class="account-entry">
+            <div class="display-happy">
+              <span class="display-happy">登录或创建一个新账户🌟</span>
+            </div>
+            <ul class="tabs-wrapper" v-for="(item,index) in accountList" :key="index">
+              <li @click="addMenuClass(index)">
+                <router-link :class="{'menuactive':index == menuClass}" :to="item.path">{{item.title}}</router-link>
               </li>
             </ul>
           </div>
@@ -118,22 +158,30 @@
     </article>
     <article class="homeclose" v-show="$store.state.isActive">
       <header class="header">
+        <!-- 这里为了避免 router-link-active 选中路由后 自动添加类 所以改用a标签了-->
         <router-link to="/" class="logo">
-          <img src="@/assets/image/logo.svg" />
+          <img @click="menuShow" src="@/assets/image/logo.svg" />
         </router-link>
-
         <!-- 下拉霸 -->
         <button class="hamburger hamburgerclose btn btn-outline-white" @click="menuShow"></button>
         <div class="clearfix"></div>
       </header>
       <div class="account-entry">
         <ul v-for="(item, index) in hamburgerList" :key="index">
-          <li class="pt-1">
+          <li class="pt-1" @click="menuShow">
             <router-link class="h5 font-weight-bold" :to="item.path">{{item.title}}</router-link>
           </li>
         </ul>
         <hr />
-        <account-component></account-component>
+        <div class="account-components">
+          <router-link to="/account">
+            <!-- <img src="@/assets/icons/icon-account.svg" /> -->
+            <button type="button" class="sign-smile btn text-success mr-4" @click="menuShow"> 登录 </button>
+          </router-link>
+          <router-link to="/account/register">
+            <button type="button" class="logon-smile btn btn-outline-success" @click="menuShow"> 注册 </button>
+          </router-link>
+        </div>
         <footer class="d-block mt-3">
           <ul class="d-block text-secondary">
             <li class="d-inline-block">English |</li>
@@ -254,21 +302,44 @@ export default {
       },
       accountList: [
         {
-          path: "",
+          path: "/account",
           title: "登录",
         },
         {
-          path: "register",
+          path: "/account/register",
           title: "注册",
         },
         {
-          path: "starbucks-rewards",
+          path: "/account/starbucks-rewards",
           title: "关于星巴克俱乐部",
         },
       ],
+
+      // 状态
+      loading: false,
+      menuClass: 0,
     };
   },
+  created() {
+    // 导航完成后获取数据
+    this.fetchData();
+  },
+  watch: {
+    // 如果路由有变化，会再次执行该方法
+    "$route.path": "fetchData",
+  },
   methods: {
+    fetchData() {
+      // 路由地址一旦变动 menuClass归零
+      this.menuClass = 0;
+      // 这里可以执行axios
+      this.loading = true;
+      console.log("路由已变更", this.$route.path);
+    },
+    /* */
+    addMenuClass(index) {
+      this.menuClass = index;
+    },
     menuShow() {
       // 通知 vuex
       this.$store.dispatch("menuShow");

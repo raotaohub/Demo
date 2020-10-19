@@ -18,6 +18,11 @@
   }
 }
 
+.menuactive {
+  font-weight: 700;
+  border-bottom: 4px solid #00a862;
+}
+
 /* 头部的字体 */
 .header {
   height: 48px;
@@ -91,11 +96,14 @@
 
 .tabs-wrapper li {
   font-size: 16px;
+  margin-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 .tabs-wrapper li a {
-  margin-bottom: 2px;
   padding-bottom: 1px;
+  margin-bottom: 6px;
+  padding: 4px 0;
 }
 
 .footer {
