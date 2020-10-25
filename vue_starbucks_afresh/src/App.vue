@@ -4,7 +4,7 @@
     <div id="wrapper">
       <router-view class="nav" name="indexleft"></router-view>
       <router-view class="content" name="indexright">
-        <!-- 以下应该是二级路由的出口 -->
+        <!-- 以下是二级路由的出口 -->
       </router-view>
     </div>
   </div>
