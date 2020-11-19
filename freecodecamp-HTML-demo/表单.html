@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			body {
+				background-image: url(https://himg2.huanqiucdn.cn/attachment2010/2019/0531/15/23/20190531032304141.jpg);				
+				background-position:center;
+				background-size: cover;
+				/*设置固定定位*/
+				position: absolute;
+				/*设置*/
+				background-attachment:fixed; 
+				background-repeat: no-repeat;
+   				color: white;
+				width: 100%;
+				/* border: 5px solid black; */
+			}
+			* {
+			    padding: 0;
+			    margin: 0;
+			}
+			@media screen and(min-width: 320px)and(max-width: 359px){
+			html{
+			font-size: 12.8px;
+			}
+			}
+			@media screen and(min-width: 360px)and(max-width: 374px){
+			html{
+			font-size: 14.4px;
+			}
+			}
+			@media screen and(min-width: 375px)and(max-width: 385px){
+			html{
+			font-size: 15px;
+			}
+			}
+			@media screen and(min-width: 386px)and(max-width: 392px) {
+			html {
+			font-size: 15.44px;
+			}
+			}
+			@media screen and(min-width: 393px)and(max-width: 400px){
+			html{
+			font-size: 16px;
+			}
+			}
+			@media screen and(min-width: 401px)and(max-width: 414px){
+			html{
+			font-size: 16.48px;
+			}
+			}
+			@media screen and(min-width: 750px)and(max-width: 799px){
+			html{
+			font-size: 30.72px;
+			}
+			}
+			
+			.container{
+				position: relative;
+				/* border: 5px solid black; */
+				width: 720px;
+  	  			margin: 50px auto 50px auto;
+			}
+			#head{
+				text-align: center;
+				padding-bottom: 30px;
+			}
+			
+			#survey-form{
+				/* position: absolute; */
+				padding: 30px 50px 30px 50px;
+				
+				background-color: rgba(18,48,90,0.8);
+			}
+			#form-group{
+				padding: 5px 0 15px 0;
+				font-size: 20px;
+				width: 100%;
+			}
+			.form-control{
+				box-sizing: border-box;
+				width: 100%;
+				padding: 8px 10px;
+				border-radius: 5px;
+			}
+			
+			.mui-input-row{
+				display: block;
+				padding-bottom: 10px;
+				width: 100%;
+				/* margin: 10px 0 10px 0; */
+			}
+			
+			h1, p {
+			    margin-top: 0;
+			    margin-bottom: 0.5rem;
+			}
+			.form-control-textarea{
+				resize: vertical;
+				height: 5rem;
+			}
+			.form-control-button{
+				background-color: aliceblue;
+				color: indigo;
+				border: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--容器-->
+		<div class="container">
+			
+			<!--头部-->
+			<div id="head">
+				<h1 id="title">freeCodeCamp Survey Form</h1>
+				<p id="description">Thank you for taking the time to help us improve the platform</p>
+			</div>
+			
+			
+			<!--表单部分-->
+			<form id="survey-form">
+				<div id="form-group">
+					<label for="name" class="mui-input-row" id="name-label">姓名</label>
+						
+						<input type="text" placeholder="输入你的姓名" id="name" class="form-control">
+					
+					
+				</div>
+				
+				<div id="form-group">
+					<label for="name" class="mui-input-row" id="email-label" >邮箱</label>
+						
+						<input type="text" placeholder="输入你的邮箱" id="email" class="form-control">
+					
+					
+				</div>
+				
+				
+				<div id="form-group">
+					<label for="age" class="mui-input-row" id="number-label">年龄</label>
+						
+						<input type="text" placeholder="输入你的年龄" id="age" class="form-control" min="10" max="99">
+					
+					
+				</div>
+				
+				<div id="form-group">
+					<p class="mui-input-row">请问您的职业为？</p>
+					<select class="form-control">
+						<option value ="1">学生</option>
+						<option value ="2">教师</option>
+						<option value ="3">医生</option>
+						<option value ="4">软件工程师</option>
+						<option value ="5">大数据分析</option>
+					</select>
+				</div>
+				
+				<div id="form-group">
+					<p>请问你会它推荐给你的朋友吗？</p>
+					<label class="mui-input-row">
+						
+						<input type="radio" placeholder="" value="yes" name="user-radio">  会
+					</label>
+					<label class="mui-input-row">
+						
+						<input type="radio" placeholder="" value="no" name="user-radio">  不会
+					</label>
+					<label class="mui-input-row">
+						
+						<input type="radio" placeholder="" value="yes or no" name="user-radio">  不确定
+					</label>
+					
+				</div>
+				
+				<div id="form-group">
+					<p>What would you like to see improved? (Check all that apply)</p>
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Front-end Projects
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Back-end Projects
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Data Visualization
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Challenges
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Open Source Community
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Gitter help rooms
+
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Videos
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  City Meetups
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Wiki
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Forum
+					</label>
+					
+					<label class="mui-input-row">
+						<input type="checkbox" name="input-checkbox" id="" value="" />
+						  Additional Courses
+					</label>
+					
+				</div>
+				
+				<div id="form-group">
+					<p>What would you like to see improved? (Check all that apply)</p>
+					<textarea class="form-control form-control-textarea" placeholder="请在这里输入 "></textarea>
+					
+				</div>
+				
+				<div id="form-group">
+					<button type="submit" class="form-control form-control-button">提交</button>
+				</div>
+			</form>
+			
+		</div>
+	</body>
+</html>

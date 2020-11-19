@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import accountComponent from "./accountComponent";
+import accountComponent from './accountComponent'
 export default {
   components: {
     accountComponent,
   },
-};
+}
 </script>
 
 <style>

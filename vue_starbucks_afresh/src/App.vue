@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import "./assets/css/index.css";
+import './assets/css/index.css'
 export default {
-  name: "App",
-};
+  name: 'App',
+}
 </script>
 
 <style>

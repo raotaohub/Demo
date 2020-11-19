@@ -21,22 +21,22 @@ export default {
     return {
       cardList: [
         {
-          url: "https://starbucks.tmall.com/",
-          img: require("@/assets/image/images-page/tmall-2020-06-29-zh.jpg"),
+          url: 'https://starbucks.tmall.com/',
+          img: require('@/assets/image/images-page/tmall-2020-06-29-zh.jpg'),
         },
         {
-          url: "https://www.starbucks.com.cn/design-studio/",
-          img: require("@/assets/image/images-page/starbucks-design-studio-web-china.jpg"),
+          url: 'https://www.starbucks.com.cn/design-studio/',
+          img: require('@/assets/image/images-page/starbucks-design-studio-web-china.jpg'),
         },
         {
-          url: "https://www.starbucks.com.cn/about/careers/",
-          img: require("@/assets/image/images-page/homepage-career-cn.jpg"),
+          url: 'https://www.starbucks.com.cn/about/careers/',
+          img: require('@/assets/image/images-page/homepage-career-cn.jpg'),
         },
       ],
-    };
+    }
   },
   methods: {},
-};
+}
 </script>
 
 <style>

@@ -6,19 +6,24 @@
 
     <section class="join-form">
       <div class="qrcode">
-        <p class=" text-center m-0 p-0">扫码登录</p>
-        <img src="" alt="">
+        <p class="text-center m-0 p-0">扫码登录</p>
+        <img src="" alt="" />
       </div>
 
       <div class="wrapper pl-3 pr-3">
         <div class="login-form">
-
           <div class="form-field">
-
             <div class="field floating">
               <div class="ok">
                 <div class="username">
-                  <input type="text" id="username" name="username" placeholder="用户名或者电子邮箱" value="" autocomplete="new-password">
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="用户名或者电子邮箱"
+                    value=""
+                    autocomplete="new-password"
+                  />
                 </div>
               </div>
             </div>
@@ -26,15 +31,25 @@
             <div class="password-group-field">
               <div class="ok">
                 <div class="password">
-                  <input type="password" name="password" placeholder="密码" value="" autocomplete="new-password">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="密码"
+                    value=""
+                    autocomplete="new-password"
+                  />
                 </div>
               </div>
             </div>
-
           </div>
 
           <div>
-            <div class="field checkbox"><input type="checkbox" id="login-remember" value="on"><label for="login-remember"><span>下次自动登录</span></label></div>
+            <div class="field checkbox">
+              <input type="checkbox" id="login-remember" value="on" /><label
+                for="login-remember"
+                ><span>下次自动登录</span></label
+              >
+            </div>
             <p><a href="">忘记密码</a></p>
           </div>
           <div>
@@ -50,16 +65,17 @@
           </button>
         </div>
 
-        <div class=" clearfix"></div>
+        <div class="clearfix"></div>
       </div>
-
     </section>
 
     <section class="carousel-index">
       <div class="account-footer">
         <div class="wrapper account-footer-box">
-          <h2 class=" text-white">加入星享俱乐部</h2>
-          <p class=" text-white-50 h5 mb-4"> 只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。</p>
+          <h2 class="text-white">加入星享俱乐部</h2>
+          <p class="text-white-50 h5 mb-4">
+            只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。
+          </p>
           <router-link to="/account">
             <button type="button" class="logon-smile btn btn-outline-success">
               注册
@@ -69,11 +85,10 @@
       </div>
     </section>
   </div>
-
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style>
@@ -118,7 +133,7 @@ export default {};
   position: absolute;
   right: 10px;
   top: 0px;
-  background: url("../../assets/jpg/qrcode-login-tip.png") no-repeat;
+  background: url('../../assets/jpg/qrcode-login-tip.png') no-repeat;
   background-size: 100%;
 }
 
@@ -142,7 +157,7 @@ export default {};
 
 /* 底部 */
 .account-footer {
-  background: url("../../assets/jpg/header_cn_2020_06_02.jpg") no-repeat;
+  background: url('../../assets/jpg/header_cn_2020_06_02.jpg') no-repeat;
   height: 280px;
 }
 .account-footer-box {

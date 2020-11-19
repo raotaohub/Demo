@@ -1,0 +1,98 @@
+/* css样式重置 */
+body{
+	margin: 0;
+	padding: 0;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.nav-link{
+	margin: 0.625rem 0;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+p{
+	width: 840px;
+}
+img{
+	border-radius: 1.55rem;
+}
+blockquote{
+	background-color: #9ACD32;
+	border-radius: 0.25rem;
+	box-shadow: 0 10px 19px 5px gainsboro;
+	/* min-height: 3.75rem; */
+	min-width: 26.25rem;
+	width: 37rem;
+	height: auto;
+	padding: 0.825rem 0;
+	margin: 0.9375rem 0;
+}
+.blockquote_code span{
+	display: block;
+	margin-left: 1.25rem;
+	font-size: 1rem;
+	line-height: 150%;
+	
+}
+p{
+	line-height: 190%;
+}
+/* 导航栏CSS样式———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— */
+#navbar{
+	/* border: 1px solid red; */
+	margin-right: 1000px;
+	min-width: 320px;
+	min-height: 100vh;
+	position: fixed;
+	border-right: 4px solid gainsboro;
+	/* display: grid;
+	grid-template-rows: auto 1fr auto; */
+}
+#navbar header{
+	font-size: 1.5rem;
+	margin: 10px 0;;
+	padding: 0.625rem 1.875rem
+}
+#navbar li{
+	border-top: 1px solid black;
+}
+#navbar a{
+	display: block;
+	padding: 0.625rem 1.875rem
+	/* font-size:1.25rem */
+}
+/* 文档CSS样式—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— */
+#main-doc{
+	/* border: 1px solid red; */
+	padding: 30px;
+	margin-left: 320px;
+	position: absolute;
+	
+}
+.main-section{
+	padding: 0 1.875rem;
+}
+#main-doc header{
+	font-size: 1.75rem;
+	margin: 10px 0px;;
+}
+#main-doc p{
+	margin: 0.9375rem 0;
+}
+#main-doc li{
+	margin-bottom: 0.625rem;
+}
+#main-doc ul{
+	padding-left: 2.5rem;
+	
+}
+.acode{
+	background-color: lightpink; border-radius: 5px;padding: 3px;
+}
+/* 媒体查询——————————————————————————————————————————————————————————————————————————————————————————————- */
+
+			

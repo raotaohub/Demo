@@ -4,13 +4,13 @@
 
 <script>
 // 这里引入CSS样式初始化 全局的
-import "../assets/css/init.css";
+import '../assets/css/init.css'
 export default {
-  name: "index",
+  name: 'index',
   data() {
-    return {};
+    return {}
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

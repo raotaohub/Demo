@@ -1,0 +1,67 @@
+<!-- 
+一.多行容器与单行容器：
+
+弹性容器可以划分为多行容器和单行容器，划分方式如下：
+
+（1）.容器的flex-wrap属性值为wrap或者wrap-reverse的容器是多行容器。
+
+（2）.只要进行上述属性设置，即便容器中只有一个行项目，也是多行容器。
+
+（3）.多行容器中，每一行在交叉轴方向上的尺寸，恰好能够包裹住项目。
+
+（4）.当行容器中，只有一个行，此行在交叉轴上的尺寸等同于容器在交叉轴上的尺寸。
+	 上面图示已经很清晰的说明了两类容器中的行高，不再进一步说明。
+	 
+	 二.区别原理分析：
+	 
+	 （1）.align-items属性规定的是项目在交叉轴方向行中的对齐方式。
+	 
+	 （2）.align-content属性规定的是项目所在行在交叉轴方向上的对齐方式。
+	 
+	 上面这两条阐述可能过于简略了，很多朋友看了不太容易理解，下面再通过代码实例进行分析。
+	 
+	 三.代码实例如下：
+ -->
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset=" utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<title>蚂蚁部落</title> 
+<style> 
+#main {
+  width: 300px;
+  height: 200px;
+  background:#ccc;
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-content: center; 
+}
+#main div {
+  margin-left:10px;
+  width: 70px;
+  height:70px;
+}
+</style>
+</head>
+<body>
+<div id="main">
+  <div style="background-color:coral;"></div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+</div>
+</body>
+</html>
+<!--
+	  代码分析如下：
+
+（1）.灰色容器元素采用弹性布局，但是并没有设置换行。
+
+（2）.也就是说此弹性容器是一个单行容器，也就意味着唯一的行高等同于容器在交叉轴上的尺寸。
+
+（3）.align-content属性是用来设置行在容器交叉轴上的对齐方式，既然行高等同于容器交叉轴上的尺寸。
+
+（4）.那么也就无所谓居中操作了，项目也就只能在行的顶端排列了。
+
+这也印证了网络上众多文章的一个结论，那就是align-content属性对单行容器无效。
+ -->

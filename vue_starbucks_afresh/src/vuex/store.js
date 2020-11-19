@@ -25,7 +25,7 @@ export default new Vuex.Store({
       state.isActive = !state.isActive;
     },
     // 更改菜单标识
-    FILTERMENU(state,value) {
+    FILTERMENU(state, value) {
       state.menuType = value
       // console.log(value)
       console.log(state.menuType)
@@ -37,8 +37,8 @@ export default new Vuex.Store({
     menuShow({ commit, state }) {
       commit('MENUSHOW')
     },
-    filterMenu({ commit, state },value) {
-      commit('FILTERMENU',value)
+    filterMenu({ commit, state }, value) {
+      commit('FILTERMENU', value)
     }
 
   },

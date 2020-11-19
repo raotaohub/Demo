@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="./css/css.css" />
+	</head>
+	<body>
+		<!-- 导航栏—————————————————————————————————————————————————————————————————————————————————————————————————————-->
+		<nav id="navbar">
+			<!-- 导航栏的头部 -->
+			<header>只要一行代码，<br>实现五种 CSS 经典布局</header>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#Introduction">介绍</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info1">一、空间居中布局</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info2">二、并列式布局</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info3">三、两栏式布局</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info4">四、三明治布局</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info5">五、圣杯布局</a>
+				</li>
+			</ul>
+			<!-- 导航栏的link标签 -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#center_info6">六、参考链接</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 文档—————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+		<main id="main-doc" >
+			<section class="main-section" id="Introduction">
+				<header ><strong>只要一行代码，实现五种 CSS 经典布局</strong></header>
+				<p>
+					页面布局是样式开发的第一步，也是 CSS 最重要的功能之一。
+				</p>
+				<p>
+					&lt;!-- 本页面内容来自阮一峰所撰写的<a href="http://www.ruanyifeng.com/blog/2020/08/five-css-layouts-in-one-line.html">《只要一行代码，实现五种 CSS 经典布局》</a> --&gt;
+					<br>&lt;!-- 本页面仅供学习参考，如有侵权请练习删除！ --&gt;
+				</p>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080719.jpg" id="Introduction_img">
+				<p>
+					常用的页面布局，其实就那么几个。下面我会介绍5个经典布局，只要掌握了它们，就能应对绝大多数常规页面。
+				</p>
+				<p>
+					这几个布局都是自适应的，自动适配桌面设备和移动设备。代码实现很简单，核心代码只有一行，有很大的学习价值，内容也很实用。
+				</p>
+				<p>我将会用到CSS的：</p>
+				<ul>
+					<li>
+						<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">Flex语法</a>
+					</li>
+					<li>
+						<a href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html" target="_blank">Grid语法</a>
+					</li>
+					<li>
+						不熟悉的朋友可以先看看教程链接，熟悉一下基本概念。每一个布局都带有 CodePen 示例，也可以到
+						<a href="https://1linelayouts.glitch.me/" target="_blank">这个网页 </a>
+						统一查看。
+					</li>
+				</ul>
+				<p style="background-color: gainsboro;font-size: 1.2rem; text-align: center; line-height: 62px; border-radius: 0.5125rem;height:62px;">
+					本文是跟极客大学合作的前端学习讲座的一部分，详见文末说明。
+				</p>
+			</section>
+			<!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+			<section class="main-section" id="center_info1">
+				<header ><strong>一、空间居中布局</strong></header>
+				<ul>
+				<p>
+					空间居中布局指的是，不管容器的大小，项目总是占据中心点。
+				</p>
+				<p>
+					CSS 代码如下（CodePen 示例）。
+				</p>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080703.jpg" >
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">".container {</span>
+							<span>display: grid;</span>
+							<span>place-items: center;</span>
+							<span>}  "</span>
+						</code>
+					</blockquote>
+					<p>上面代码需要写在容器中，指定为 Grid 布局。核心代码是<span class="acode">place-items</span>属性那一行，它是一个简写形式。</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">"place-items: &lt;align-items&gt; &lt;justify-items&gt;;  "</span>
+						</code>
+					</blockquote>
+					<p><span class="acode">align-items</span>属性控制垂直位置，<span class="acode">justify-items</span>属性控制水平位置。这两个属性的值一致时，就可以合并写成一个值。<br>所以，<span class="acode" href="">place-items: center;</span>等同于<span href="" class="acode">place-items: center center;</span>。</p>
+					<p>同理，<b>左上角</b>布局可以写成下面这样。</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">"place-items: start; "</span>
+						</code>
+					</blockquote>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080704.jpg" >
+				<p><b>右下角</b>布局。</p>
+				<blockquote>
+					<code class="blockquote_code">
+						<span class="blockquote_code">"place-items: end; "</span>
+					</code>
+				</blockquote>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080705.jpg" >
+				</ul>
+				
+				
+			</section>
+			<!-- 222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+			<section class="main-section" id="center_info2">
+				<header ><strong>二、并列式布局</strong></header>
+				<ul>
+				<p>
+					并列式布局就是多个项目并列。
+				</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080706.jpg" >
+				<p>
+					如果宽度不够，放不下的项目就自动折行。
+				</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080707.jpg" >
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080708.jpg" alt="">
+				<p>它的实现也很简单。首先，容器设置成 Flex 布局，内容居中（<span class="acode">justify-content</span>）可换行（<span class="acode">flex-wrap</span>）。</p>
+				<blockquote>
+					<code class="blockquote_code">
+						<span class="blockquote_code">".container {</span>
+						<span class="blockquote_code"> display: flex;</span>
+						<span class="blockquote_code">flex-wrap: wrap;</span>
+						<span class="blockquote_code">justify-content: center;</span>
+						<span class="blockquote_code">}"</span>
+					</code>
+				</blockquote>
+				<p>然后，项目上面只用一行<span class="acode">flex</span>属性就够了（CodePen 示例）。</p>
+				<blockquote>
+					<code class="blockquote_code">
+						<span class="blockquote_code">".item {</span>
+						<span class="blockquote_code">flex: 0 1 150px;</span>
+						<span class="blockquote_code">margin: 5px;</span>
+						<span class="blockquote_code">}"</span>
+					</code>
+				</blockquote>
+				<p><span class="acode">flex</span>属性是<span class="acode">flex-grow</span>、<span class="acode">flex-shrink</span>、<span class="acode">flex-basis</span>这三个属性的简写形式。</p>
+				<blockquote>
+					<code class="blockquote_code">
+						<span class="blockquote_code">"flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;;"</span>
+
+					</code>
+				</blockquote>
+				<li><a target="_blank" href="https://learn.freecodecamp.one/responsive-web-design/css-flexbox/use-the-flex-basis-property-to-set-the-initial-size-of-an-item/">flex-basis</a>：项目的初始宽度。</li>
+				<li><a target="_blank" href="https://learn.freecodecamp.one/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items/">flex-grow</a>：指定如果有多余宽度，项目是否可以扩大。</li>
+				<li><a target="_blank" href="https://learn.freecodecamp.one/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items/">flex-shrink</a>：指定如果宽度不足，项目是否可以缩小。</li>
+				<p><span class="acode">flex: 0 1 150px;</span>的意思就是，项目的初始宽度是150px，且不可以扩大，但是当容器宽度不足150px时，项目可以缩小。<br>如果写成<span class="acode">flex: 1 1 150px;</span>，就表示项目始终会占满所有宽度。</p>
+				<h3>情况1</h3>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080711.jpg" >
+				<h3>情况2</h3>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080710.jpg" >
+				<h3>情况3</h3>
+				<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080709.jpg" >
+				
+				</ul>
+			</section>
+			<!-- 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
+			<section class="main-section" id="center_info3">
+				<header ><strong>三、两栏式布局</strong></header>
+				<ul>
+					<p>两栏式布局就是一个边栏，一个主栏。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080712.jpg" >
+					<p>下面的实现是，边栏始终存在，主栏根据设备宽度，变宽或者变窄。如果希望主栏自动换到下一行，可以参考上面的"并列式布局"。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080714.jpg" >
+					<p>使用 Grid，实现很容易（<a href="https://codepen.io/una/pen/gOaNeWL">CodePen 示例</a>）</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">".container {</span>
+							<span class="blockquote_code">display: grid;</span>
+							<span class="blockquote_code"> grid-template-columns: minmax(150px, 25%) 1fr;</span>
+							<span class="blockquote_code">}"</span>
+						</code>
+					</blockquote>
+					<p>上面代码中，<span class="acode">grid-template-columns</span>指定页面分成两列。第一列的宽度是<span class="acode">minmax(150px, 25%)</span>，即最小宽度为<span class="acode">150px</span>，最大宽度为总宽度的<span class="acode">25%</span>；第二列为<span class="acode">1fr</span>，即所有剩余宽度。</p>
+				</ul>
+			</section>
+			<!-- 4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
+			<section class="main-section" id="center_info4">
+				<header ><strong>四、三明治布局</strong></header>
+				<p>
+					
+				</p>
+				<p>
+					
+				</p>
+				<ul>
+					<p>三明治布局指的是，页面在垂直方向上，分成三部分：页眉、内容区、页脚。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080715.jpg" >
+					<p>这个布局会根据设备宽度，自动适应，并且不管内容区有多少内容，页脚始终在容器底部（粘性页脚）。也就是说，这个布局总是会占满整个页面高度。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080716.jpg" >
+					<p>CSS 代码如下（<a href="https://codepen.io/una/pen/bGVXPWB">CodePen</a> 示例）。</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">".container {</span>
+							<span class="blockquote_code">display: grid;</span>
+							<span class="blockquote_code">grid-template-rows: auto 1fr auto;</span>
+							<span class="blockquote_code">}"</span>
+						</code>
+					</blockquote>
+					<p>上面代码写在容器上面，指定采用 Grid 布局。核心代码是<span class="acode">grid-template-rows</span>那一行，指定垂直高度怎么划分，这里是从上到下分成三部分。第一部分（页眉）和第三部分（页脚）的高度都为<span class="acode">auto</span>，即本来的内容高度；第二部分（内容区）的高度为<span class="acode">1fr</span>，即剩余的所有高度，这可以保证页脚始终在容器的底部。</p>
+				</ul>
+			</section>
+			<!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+			<section class="main-section" id="center_info5">
+				<header ><strong>五、圣杯布局</strong></header>
+				<ul>
+					<p>圣杯布局是最常用的布局，所以被比喻为圣杯。它将页面分成五个部分，除了页眉和页脚，内容区分成左边栏、主栏、右边栏。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080717.jpg" >
+					<p>这里的实现是，不管页面宽度，内容区始终分成三栏。如果宽度太窄，主栏和右边栏会看不到。如果想将这三栏改成小屏幕自动堆叠，可以参考并列式布局。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080718.jpg" >
+					<p>HTML 代码如下。</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">"&lt;div class='container'></span>
+							<span class="blockquote_code">&nbsp;&nbsp;&nbsp;&nbsp;	&lt;header/&gt;</span>
+							<span class="blockquote_code">	&nbsp;&nbsp;&nbsp;&nbsp;  &lt;div/&gt;</span>
+							<span class="blockquote_code">	&nbsp;&nbsp;&nbsp;&nbsp;  &lt;main/&gt;</span>
+							<span class="blockquote_code"> &nbsp;&nbsp;&nbsp;&nbsp;   &lt;div/&gt;</span>
+							<span class="blockquote_code">  &nbsp;&nbsp;&nbsp;&nbsp;  &lt;footer/&gt;</span>
+							<span class="blockquote_code">&lt;/div&gt;"</span>
+						</code>
+					</blockquote>
+					<p>CSS 代码如下（<a href="https://codepen.io/una/pen/mdVbdBy">CodePen</a> 示例）。</p>
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">".container {</span>
+							<span class="blockquote_code">display: grid;</span>
+							<span class="blockquote_code">grid-template: auto 1fr auto / auto 1fr auto;</span>
+							<span class="blockquote_code">}"</span>
+						</code>
+					</blockquote>
+					<p>上面代码要写在容器上面，指定采用 Grid 布局。核心代码是<span class="acode">grid-template</span>属性那一行，它是两个属性<span class="acode"><a href="https://learn.freecodecamp.one/responsive-web-design/css-grid/add-rows-with-grid-template-rows">grid-template-rows</a></span>（垂直方向）和<span class="acode"><a href="https://learn.freecodecamp.one/responsive-web-design/css-grid/add-columns-with-grid-template-columns">grid-template-columns</a></span>（水平方向）的简写形式。</p>
+					
+					<blockquote>
+						<code class="blockquote_code">
+							<span class="blockquote_code">"grid-template: "&lt;grid-template-rows&gt; / &lt;grid-template-columns&gt;"</span>
+						</code>
+					</blockquote>
+					<p><span class="acode">grid-template-rows</span>和<span class="acode">grid-template-columns</span>都是<span class="acode">auto 1fr auto</span>，就表示页面在垂直方向和水平方向上，都分成三个部分。第一部分（页眉和左边栏）和第三部分（页脚和右边栏）都是本来的内容高度（或宽度），第二部分（内容区和主栏）占满剩余的高度（或宽度）。</p>
+				</ul>
+			</section>
+			<!-- 66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+			<section class="main-section" id="center_info6">
+				<header ><strong>六、参考链接</strong></header>
+				<ul>
+					<li><a href="https://web.dev/one-line-layouts/">Ten modern layouts in one line of CSS, </a>Una Kravets</li>
+					<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程</a></li>
+					<li><a href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html">Grid 布局教程</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template">grid-template 属性</a>, MDN</li>
+				</ul>
+			</section>
+			<section class="main-section" id="center_info6">
+				<header ><strong>前端小课</strong></header>
+				<ul>
+					<p>看了上面的内容，如果你还想进一步学习更多前端知识，欢迎关注 极客大学的前端小课。</p>
+					<p>前端小课除了 CSS，还讲授 JavaScript，尤其是生产中用得最多的几个框架。这次的授课老师是阿里巴巴前手淘前端团队负责人winter，他可能是目前市场上最大牌的前端讲师。</p>
+					<p>他结合自己的经验，手把手教大家，如何从零开始自己实现一个类似 React 的简单框架，教你领悟前端框架的原理。它是如何将所有功能封装在一起，暴露接口，给开发者使用，并且还能支持组件。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080720.jpg" >
+					<p>整个前端小课是 4 天视频课程 + 3 天实践训练，还有助教随时答疑辅导、班主任每天督促 + 配套实战作业提交，只需要 ¥9.8 ！<a href="http://gk.link/a/10klN">点击这里</a>，或者手机扫描下面的二维码就可报名。</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020080721.jpg" >
+					<p>（完）</p>
+					<blockquote>
+						文档信息<br>
+						版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）<br>
+						发表日期： 2020年8月10日
+					</blockquote>
+					<p>腾讯云建站，一年只要6元</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020081101.jpg" style="height: auto; width: 70%;" >
+					<p>Vue 源码解读，9元领取</p>
+					<img src="https://www.wangbase.com/blogimg/asset/202008/bg2020081003.jpg" style="height: auto; width: 70%;">
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

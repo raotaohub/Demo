@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.bottom {
+  width: 100%;
+  max-width: 450px;
+  /*  */
+  height: 650px;
+  background: firebrick;
+  transform: rotate(-7deg);
+  border-radius: 6px;
+
+}
+
+.papper {
+  width: 100%;
+  max-width: 450px;
+  /*  */
+  height: 650px;
+  background: white;
+  transform: rotate(7deg);
+  border-radius: 6px;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+}
+
+.content {
+  font-size: 48px;
+  padding: 20px;
+  color: brown;
+}
+
+.heart {
+  align-self: flex-end;
+  font-size: 48px;
+  animation: heart-bling 1s linear 0s infinite alternate
+}
+
+@keyframes heart-bling {
+  from {
+    opacity: 0.3;
+    transform: scale(0.2);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1.5);
+  }
+
+}

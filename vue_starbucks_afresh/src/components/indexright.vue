@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import accountComponent from "./commons/accountComponent.vue";
-import carouselIndex from "./commons/carouselIndex.vue";
-import promotion from "./commons/promotion.vue";
-import programClub from "./commons/programClub.vue";
-import tmall from "./commons/tmall.vue";
-import coffeeHouse from "./commons/coffeehouse.vue";
-import license from "./commons/license.vue";
+import accountComponent from './commons/accountComponent.vue'
+import carouselIndex from './commons/carouselIndex.vue'
+import promotion from './commons/promotion.vue'
+import programClub from './commons/programClub.vue'
+import tmall from './commons/tmall.vue'
+import coffeeHouse from './commons/coffeehouse.vue'
+import license from './commons/license.vue'
 
 export default {
   components: {
@@ -39,7 +39,7 @@ export default {
     coffeeHouse,
     license,
   },
-};
+}
 </script>
 
 <style>

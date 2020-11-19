@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset=" utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<title>蚂蚁部落</title> 
+<style> 
+#main {
+  width: 300px;
+  height: 200px;
+  background:#ccc;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center; 
+}
+#main div {
+  margin-left:10px;
+  width: 70px;
+  height:70px;
+}
+</style>
+</head>
+<body>
+<div id="main">
+  <div style="background-color:coral;"></div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+  <div style="background-color:red;"></div>
+  <div style="background-color:yellow;"></div>
+</div>
+</body>
+</html>
+<!-- 代码分析如下：
+
+（1）.外部灰色元素采用弹性布局，并将flex-flow属性值设置为row wrap。
+
+（2）.这意味着灰色弹性容器是一个多行容器，每一个行高等同于当前行中项目在交叉轴上的尺寸。
+
+（3）.align-content属性用来设置行在交叉轴上的对齐方式，于是此属性值设置为center。
+
+（4）.也就意味着将两个行在交叉轴上居中对齐，所以视觉上实现了项目居中对齐。 -->

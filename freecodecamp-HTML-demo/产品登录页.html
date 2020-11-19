@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: #eee;
+		}
+
+		@media screen and(min-width: 320px)and(max-width: 359px) {
+			html {
+				font-size: 12.8px;
+			}
+		}
+
+		@media screen and(min-width: 360px)and(max-width: 374px) {
+			html {
+				font-size: 14.4px;
+			}
+		}
+
+		@media screen and(min-width: 375px)and(max-width: 385px) {
+			html {
+				font-size: 15px;
+			}
+		}
+
+		@media screen and(min-width: 386px)and(max-width: 392px) {
+			html {
+				font-size: 15.44px;
+			}
+		}
+
+		@media screen and(min-width: 393px)and(max-width: 400px) {
+			html {
+				font-size: 16px;
+			}
+		}
+
+		@media screen and(min-width: 401px)and(max-width: 414px) {
+			html {
+				font-size: 16.48px;
+			}
+		}
+
+		@media screen and(min-width: 750px)and(max-width: 799px) {
+			html {
+				font-size: 30.72px;
+			}
+		}
+
+		.fcc-grid {
+			width: 100%;
+			height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 18px;
+			;
+		}
+
+		#header {
+			position: fixed;
+			width: 100%;
+			height: 60px;
+			top: 0;
+			background: LightGray;
+			align-items: center;
+		}
+
+		#logo {
+			position: absolute;
+			display: inline;
+			width: 60vw;
+			float: left;
+			line-height: 60px;
+		}
+
+		#header-img {
+			width: 60px;
+			height: 60px;
+			max-width: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-left: 20px;
+
+		}
+
+		#nav-bar {
+			width: 35vw;
+			display: inline;
+			float: right;
+			line-height: 60px;
+		}
+
+		#nav-bar ul {
+			/* align-items: center; */
+			/* display: inline; */
+			display: flex;
+			justify-content: space-around;
+		}
+
+		#nav-bar li {
+			display: inline;
+			list-style: none;
+		}
+
+		#email {
+			height: 50px;
+			width: 50%;
+			padding: 5px 10px 5px 10px;
+		}
+
+		#submit {
+			height: 30px;
+			width: 35%;
+			background-color: gold;
+			padding: 3px 5px 3px 5px;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+
+		#info-form {
+			width: 100%;
+			/* border: 1px solid red; */
+			margin: 30px auto;
+
+		}
+
+		#form {
+
+			width: 60vw;
+			margin: 40px auto;
+			margin-top: 120px;
+			/* border: 1px solid red; */
+			text-align: center;
+			margin-bottom: 50px;
+
+		}
+
+		#form input {
+			display: block;
+			margin: 0 auto;
+			margin-top: 10px;
+
+		}
+
+		#section {
+			width: 60vw;
+			margin: 20px auto;
+			/* border: 1px solid red; */
+			text-align: left;
+			margin-bottom: 50px;
+		}
+
+		#section-info {
+			position: relative;
+			margin: 30px auto;
+		}
+
+		#section-info h2 {
+			text-align: center;
+		}
+
+		#video {
+			width: 60vw;
+			margin: 20px auto;
+			/* border: 1px solid red; */
+			text-align: left;
+			margin-bottom: 50px;
+		}
+
+		#video video {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+
+		#grid-footer {
+			display: flex;
+			position: relative;
+			width: 60vw;
+			margin: 20px auto;
+			/* border: 1px solid red; */
+			text-align: left;
+			margin-bottom: 50px;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		/* 设置媒体查询，当窗口小于800PX时候， */
+		@media (max-width: 800px) {
+			#grid-footer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.footer-info {
+				margin: 0;
+			}
+		}
+
+		.footer-info {
+			border: 1px solid black;
+			border-radius: 5px;
+			width: 100%;
+			min-height: 320px;
+			display: inline-block;
+			margin: 10px;
+			text-align: center;
+
+		}
+
+		.info-end {
+			background-color: gold;
+			padding: 15px 0;
+		}
+
+		#grid-footer h2 {
+			padding: 15px 0;
+		}
+
+		#grid-footer li {
+			list-style: none;
+			padding: 10px 0;
+			font-size: 18 px;
+		}
+
+		.btn {
+			width: 60%;
+			height: auto;
+			padding: 5px 10px;
+			margin-bottom: 10px;
+			background-color: gold;
+		}
+
+		.footer {
+			height: 110px;
+			width: 100%;
+			margin-top: 25px;
+		}
+
+		.footer-info-end {
+			background-color: LightGray;
+			margin-top: 10px;
+			font-size: 30px;
+			height: 8vh;
+		}
+
+		.footer-info-end a {
+			color: #000000;
+
+		}
+
+		.footer-info2 {
+			height: 110px;
+			max-width: 580px;
+			margin: 0px auto;
+			display: block;
+			font-size: 16px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="fcc-grid">
+		<!-- 头部 -->
+		<div class="grid" id="header">
+			<!-- logo -->
+			<div id="logo">
+				<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2164552727,1674393781&fm=26&gp=0.jpg"
+					id="header-img" alt="logo">
+			</div>
+			<!-- link -->
+			<nav id="nav-bar">
+				<ul>
+					<li>
+						<a href="" class="nav-link">Features</a>
+					</li>
+					<li>
+						<a href="" class="nav-link">How It Works</a>
+					</li>
+					<li>
+						<a href="" class="nav-link">Pricing</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!--form -->
+		<div class="grid" id="info-form">
+			<form action=" https://www.freecodecamp.com/email-submit" class="grid" id="form">
+				<h2>Handcrafted, home-made masterpieces</h2>
+				<input id="email" type="email" name="email" value="" placeholder="Enter your email address" />
+				<input id="submit" type="submit" name="submit" value="GET STARTED" />
+
+			</form>
+
+		</div>
+		<!-- info -->
+		<div class="grid" id="section">
+			<hr>
+			<div id="section-info">
+				<h2>Premium Materials</h2>
+				<p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your
+					purchase.</p>
+			</div>
+			<div id="section-info">
+				<h2>Fast Shipping</h2>
+				<p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if
+					you are not satisfied.</p>
+			</div>
+			<div id="section-info">
+				<h2>Quality Assurance</h2>
+				<p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the
+					pitch of your instrument.</p>
+			</div>
+
+		</div>
+		<!-- video -->
+		<div id="video">
+			<video src="/i/movie.ogg" controls="controls">
+				your browser does not support the video tag
+			</video>
+		</div>
+		<!-- show -->
+		<div class="grid" id="grid-footer">
+			<div class="footer-info">
+				<div class="info-end">
+					<h3>TENOR TROMBONE</h3>
+				</div>
+				<h2>398元</h2>
+				<ol>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				</ol>
+				<button class="btn" type="button">购买</button>
+			</div>
+
+			<div class="footer-info">
+				<div class="info-end">
+					<h3>BASS TROMBONE</h3>
+				</div>
+				<h2>398元</h2>
+				<ol>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				</ol>
+				<button class="btn" type="button">购买</button>
+			</div>
+
+			<div class="footer-info">
+				<div class="info-end">
+					<h3>VALVE TROMBONE</h3>
+				</div>
+				<h2>898元</h2>
+				<ol>
+					<li>Plays similar to a Trumpet</li>
+					<li>Great for Jazz Bands</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				</ol>
+				<button class="btn" type="button">购买</button>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-info2">
+				<div class="freecodecamp2020">
+					©freecodecamp.one <br>商务合作
+				</div>
+				<div class="footer-info-temawork">
+					<ul>
+						<li>合作联系：https://www.freecodecamp.org/email-submit了解更多</li>
+						<li>合作联系：https://www.freecodecamp.org/email-submit了解更多</li>
+						<li>合作联系：https://www.freecodecamp.org/email-submit了解更多</li>
+					</ul>
+				</div>
+
+				<div class="footer-info-end"><a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer"
+						target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-69" rel="69">关于
+						</font>
+					</a><a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer"
+						target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-70" rel="70">校友网络
+						</font>
+					</a><a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-71" rel="71">开源
+						</font>
+					</a><a href="https://www.freecodecamp.org/shop/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-72" rel="72">商店
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-73" rel="73">支持
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-74" rel="74">赞助商
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer"
+						target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-75" rel="75">学术诚实
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-76" rel="76">的行为准则
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-77" rel="77">隐私政策
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-78" rel="78">服务条款
+						</font>
+					</a><a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank">
+						<font class="OUTFOX_JTR_TRANS_NODE" id="OUTFOX_JTR_TRANS_NODE-79" rel="79">版权政策
+						</font>
+					</a></div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body h1 h2 h3 h4 h5 {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 导航区 */
+#navbar {
+	width: 100%;
+	display: inline-block;
+	/* 这行是为了将容器转成块，可设置宽高，可在一行内显示*/
+	background-color: #be3144;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0 10px 0px #be3144;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#navbar>ul {
+	list-style: none;
+	width: 100%;
+}
+
+#navbar>ul>li {
+	float: right;
+	padding: 15px;
+}
+
+#navbar>ul>li>a {
+	font-size: 1.5rem;
+	color: white;
+}
+
+/* <!-- 欢迎区域 --> */
+#welcome-section {
+	width: 100%;
+	background-color: #454545;
+	height: 100vh;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: flex;
+}
+
+#welcome-section>h1 {
+	font-size: 4rem
+}
+
+#welcome-section>h3 {
+	font-size: 1.75rem;
+	font-family: "仿宋";
+}
+
+/* 项目区域 */
+#project-info {
+	align-items: center;
+	justify-content: center;
+	background-color: #45567d;
+	min-height: 31.25rem;
+}
+
+#project-info>h2 {
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+	margin-bottom: 1.25rem;
+	border-bottom: 2px solid white;
+}
+
+#project {
+	box-sizing: border-box;
+	padding: 7.5rem 7.5rem;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-gap: 6.125rem;
+}
+
+.project-tile {
+	flex: 0 1 320px;
+	width: 500px;
+	height: auto;
+	/* border: 1px solid red; */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.project-tile span {
+	background-color: #303841;
+	color: white;
+	width: 500px;
+	padding: 15px 0 15px 0;
+	display: block;
+}
+
+.project-img {
+	height: calc(100% - 3.8rem);
+	width: 100%;
+}
+
+#profile-link {
+	background-color: #303841;
+	color: white;
+	padding: 0 15px;
+}
+
+/*  */
+#footer {
+	width: 100%;
+	background-color: #454545;
+	height: 26.25rem;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: flex;
+}
+
+#footer>h1 {
+	font-size: 4rem
+}
+
+#footer>h3 {
+	font-size: 1.75rem;
+	font-family: "仿宋";
+	color: white;
+}
+
+#footer>h3>a {
+	color: white;
+}
+
+
+@media screen and(min-width: 320px)and(max-width: 359px) {
+	html {
+		font-size: 12.8px;
+	}
+}
+
+@media screen and(min-width: 360px)and(max-width: 374px) {
+	html {
+		font-size: 14.4px;
+	}
+}
+
+@media screen and(min-width: 375px)and(max-width: 385px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media screen and(min-width: 386px)and(max-width: 392px) {
+	html {
+		font-size: 15.44px;
+	}
+}
+
+@media screen and(min-width: 393px)and(max-width: 400px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and(min-width: 401px)and(max-width: 414px) {
+	html {
+		font-size: 16.48px;
+	}
+}
+
+@media screen and(min-width: 750px)and(max-width: 799px) {
+	html {
+		font-size: 30.72px;
+	}
+}
